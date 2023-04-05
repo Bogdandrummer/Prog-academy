@@ -1,0 +1,228 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	width: 100%;
+	min-width: 530px;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 100%;
+	position: relative;
+	min-height: 400px;
+	background: url("/img/background.jpg") center / cover no-repeat;
+	animation: main_slide 2s ease-in-out 1 normal running 0ms both;
+}
+@keyframes main_slide {
+	from {
+		top: -400px;
+	}
+	to {
+		top: 0;
+	}
+}
+.main__title {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	margin: 70px 0 0 0;
+	width: 100%;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.4);
+	box-shadow: 1px 1px 10px #eee;
+	font-size: 50px;
+	font-family: "Dancing Script", cursive;
+	text-transform: uppercase;
+	animation: main_title-slide 1s ease-out 1 normal running 2s both;
+}
+@keyframes main_title-slide {
+	from {
+		right: -100%;
+	}
+	to {
+		right: 0;
+	}
+}
+.cards {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	margin: 30px auto;
+	width: 75%;
+	min-width: 500px;
+	animation: cards_show 1s ease 1 normal running 3s both;
+}
+@keyframes cards_show {
+	from {
+		opacity: 0;
+		transform: scale(3);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.card__item {
+	display: flex;
+	flex-direction: column;
+	padding: 40px 20px 20px 20px;
+	flex: 1 1 30%;
+	min-height: 150px;
+	color: #eec;
+	background: rgba(100, 100, 100, 0.4);
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px #222;
+	transition: all 0.5s cubic-bezier(0.75, -1.25, 0.65, 3) 0s;
+}
+.card__item:hover {
+	scale: 1.2;
+	transition: all 0.2s ease-in;
+	box-shadow: 5px 5px 10px #222;
+	background: rgba(100, 100, 100, 0.7);
+}
+.card__item:active {
+	scale: 1.2;
+	transition: linear 2s;
+	transform: rotatey(360deg);
+	box-shadow: 5px 5px 10px #222;
+	background: rgba(100, 100, 100, 0.7);
+}
+.card__title {
+	display: inline;
+	text-align: right;
+	font-family: "Dancing Script", cursive;
+	text-transform: uppercase;
+}
+#ttl,
+#ttl2,
+#ttl3 {
+	margin-right: 15px;
+}
+.card__text {
+	text-align: justify;
+	margin: 12px 0 0 0;
+}
+.card__text > p {
+	text-align: right;
+}
+.footer {
+	display: flex;
+	width: 70%;
+	margin: 40px auto 60px auto;
+}
+.footer__left {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 60%;
+	position: relative;
+	z-index: 0;
+	animation: footer_left-circle 3s ease 1 normal running 4s both;
+}
+@keyframes footer_left-circle {
+	from {
+		border-radius: 50%;
+		transform: scale(0);
+		overflow: hidden;
+		border: 3px solid #000;
+		box-shadow: 5px 2px 5px #555;
+	}
+	to {
+		border-radius: none;
+		transform: scale(1);
+		overflow: hidden;
+		border: 0px solid #fff;
+	}
+}
+.footer__left-title {
+	font-size: 25px;
+	font-family: "Dancing Script", cursive;
+	text-transform: uppercase;
+}
+.footer_text {
+	font-size: 14px;
+	text-align: justify;
+	margin: 15px 0 0 0;
+	padding: 0 40px 0 0;
+	transition: all 0.2s ease-in;
+}
+.footer_text:active {
+	transition: all 0.2s ease-out;
+	transform: scale(0.9);
+	border: 1px solid #aaa;
+	box-shadow: 3px 3px 10px #aaa;
+	border-radius: 10px;
+	background-color: rgb(244, 245, 212);
+	padding: 10px;
+	overflow: visible;
+}
+.footer_text > p {
+	text-align: right;
+}
+.footer__right {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 40%;
+	position: relative;
+	z-index: 2;
+	animation: footer_right-show 1s ease-out 1 normal running 7s both;
+}
+@keyframes footer_right-show {
+	0% {
+		right: -100%;
+	}
+	50% {
+		right: 0;
+		background-color: #fff;
+	}
+	75% {
+		right: 10%;
+		background-color: rgb(150, 0, 0);
+		opacity: 0.3;
+	}
+	100% {
+		right: 0;
+		background-color: #fff;
+	}
+}
+.footer__right-title {
+	height: 10%;
+	padding: 5% 0 0 12%;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 400;
+}
+.footer__links {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin: 10px 0 0 0;
+	height: 90%;
+}
+.footer__links > a {
+	color: #555;
+	text-decoration: none;
+	transition: linear 200ms;
+	padding-bottom: 10px;
+}
+.footer__links > a:hover {
+	scale: 1.1;
+	transition: ease-in-out 200ms;
+	box-shadow: 2px 2px 5px #999;
+	background: rgba(150, 150, 150, 0.2);
+}
+.footer__links > a:active {
+	scale: 0.97;
+	transition: ease-in-out 20ms;
+	background: rgba(100, 100, 100, 0.5);
+	box-shadow: 2px 2px 3px #222;
+	color: #222;
+}
+.fa-brands {
+	margin-right: 15px;
+	font-size: 30px;
+}

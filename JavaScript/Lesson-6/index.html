@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task_Objects</title>
+</head>
+
+<body>
+	<script>
+
+
+
+		//Task 1
+		/*
+		let Point = {
+			x: 0,
+			y: 0
+		}
+		function GetQuadrant() {
+			Point.x = prompt('Input X:');
+			Point.y = prompt('Input Y:');
+			if (Point.x > 0 & Point.y > 0) {
+				alert('1-й квадрант');
+			} else if (Point.x < 0 & Point.y > 0) {
+				alert('2-й квадрант');
+			} else if (Point.x < 0 & Point.y < 0) {
+				alert('3-й квадрант');
+			} else if (Point.x > 0 & Point.y < 0) {
+				alert('4-й квадрант');
+			}
+		}
+		GetQuadrant();
+		GetQuadrant();
+		GetQuadrant();
+		GetQuadrant(); */
+
+
+
+
+		//	Task 2
+		/*
+		let Calculator = {
+			a: +prompt('Input a:'),
+			b: +prompt('Input b:'),
+			s: prompt('Input operation ( + - * / ):')
+		}
+
+		Calculator.sum = function () {
+			document.write(Calculator.a, ' + ', Calculator.b, ' = ', Calculator.a + Calculator.b);
+		}
+		Calculator.sub = function () {
+			document.write(Calculator.a, ' - ', Calculator.b, ' = ', Calculator.a - Calculator.b);
+		}
+		Calculator.mult = function () {
+			document.write(Calculator.a, ' * ', Calculator.b, ' = ', Calculator.a * Calculator.b);
+		}
+		Calculator.div = function () {
+			document.write(Calculator.a, ' / ', Calculator.b, ' = ', Calculator.a / Calculator.b);
+		}
+		function Check() {
+			if (Calculator.s == '+') { Calculator.sum(); }
+			else if (Calculator.s == '-') { Calculator.sub() }
+			else if (Calculator.s == '*') { Calculator.mult() }
+			else if (Calculator.s == '/') { Calculator.div() }
+		}
+		Check();  */
+
+
+
+		// Task 3
+
+		/*
+		//1-й способ
+
+		const user = {};
+		const userBase = [];
+		var subm = true;
+		//Подтверждение ввода нового пользователя в массив
+		function check() {
+			let result = confirm("Заполнить данные о новом пользователе?");
+			subm = result;
+			return result;
+		}
+		while (subm == true) {
+			subm = check();
+			if (subm == true) {
+				user.name = prompt("Введите имя:");
+				user.sName = prompt("Введите фамилию:");
+				user.age = +prompt("Введите возраст:");
+				user.occupation = prompt("Введите должность:");
+			}
+			userBase.push(user);
+		}
+
+		user.showInfo = function () {
+			document.write(`<br> Имя : ${this.name} <br> Фамилия: ${this.sName} <br> Возраст : ${this.age} <br> Должность: ${this.occupation}`);
+		}
+		
+		for (let i = 0; i < userBase.length; i++) {
+			userBase[i].showInfo();
+		} */
+
+		// !!Альтернативный способ!! 
+		/*
+		const user = {};
+		let user2 = {};
+		var i = 0;
+		const userBase = [];
+		var subm = true;
+		//Подтверждение ввода нового пользователя в массив
+		function check() {
+			let result = confirm("Заполнить данные о новом пользователе?");
+			subm = result;
+			return result;
+		}
+		while (subm == true) {
+			subm = check();
+			if (subm == true) {
+				user.name = prompt("Введите имя:");
+				user.sName = prompt("Введите фамилию:");
+				user.age = +prompt("Введите возраст:");
+				user.occupation = prompt("Введите должность:");
+			}
+			user2 = Object.assign({}, user);
+			userBase.push(user2);
+		}
+
+		function showInfo() {
+			document.write(`<br> Имя : ${userBase[i].name} <br> Фамилия: ${userBase[i].sName} <br> Возраст : ${userBase[i].age} <br> Должность: ${userBase[i].occupation}`);
+		}
+
+		for (i = 0; i < userBase.length - 1; i++) {
+			showInfo();
+		} */
+
+		
+		
+		// Task 4
+		/*
+		const user = {};
+		const userBase = [];
+		var subm = true;
+		//Подтверждение ввода нового пользователя в массив
+		function check() {
+			let result = confirm("Заполнить данные о новом пользователе?");
+			subm = result;
+			return result;
+		}
+		function salar() {
+			if (user.occupation == "director") {
+				user.salary = "3000$";
+			} else if (user.occupation == "manager") {
+				user.salary = "1500$";
+			} else if (user.occupation == "programmer") {
+				user.salary = "2000$";
+			} else {
+				user.salary = "1000$";
+			}
+		}
+		while (subm == true) {
+			subm = check();
+			if (subm == true) {
+				user.name = prompt("Введите имя:");
+				user.sName = prompt("Введите фамилию:");
+				user.age = +prompt("Введите возраст:");
+				user.occupation = prompt("Введите должность:");
+				salar();
+			}
+			userBase.push(user);
+		}
+
+		user.showInfo = function () {
+			document.write(`<br> Имя : ${this.name} <br> Фамилия: ${this.sName} <br> Возраст : ${this.age} <br> Должность: ${this.occupation} Зарплата: ${this.salary}`);
+		}
+
+		for (let i = 0; i < userBase.length; i++) {
+			userBase[i].showInfo();
+		} */
+	</script>
+
+</body>
+
+</html>

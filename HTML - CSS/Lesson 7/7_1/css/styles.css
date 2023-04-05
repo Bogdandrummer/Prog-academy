@@ -1,0 +1,150 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	max-width: 1200px;
+	margin: 0 auto;
+}
+@media (max-width: 667px) {
+	.content {
+		width: 100%;
+		min-width: 300px;
+		margin: 0;
+	}
+}
+.header {
+	display: flex;
+	flex: 0 0 50px;
+	flex-direction: column;
+	background-color: rgb(71, 70, 70);
+	justify-content: center;
+}
+.menu {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	text-transform: capitalize;
+	justify-content: space-between;
+	align-items: center;
+	color: #aaa;
+}
+.menu__left {
+	position: relative;
+	z-index: 0;
+}
+#burger__menu {
+	display: none;
+	height: 100%;
+	font-size: 35px;
+}
+@media (max-width: 667px) {
+	#burger__menu:hover + .list__left,
+	.list__left:hover {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: center;
+		position: absolute;
+		top: 50px;
+		left: 20px;
+		z-index: 0;
+		width: 130px;
+		padding: 15px;
+		font-size: 20px;
+		background-color: rgba(50, 50, 50, 0.5);
+	}
+
+	#burger__menu:hover + .list__left > li,
+	.list__left:hover > li,
+	.list__left li,
+	.list__left li:hover {
+		border: none;
+		margin: 5px 5px 5px 10px;
+		padding: 0;
+	}
+}
+
+.list__left {
+	display: flex;
+	width: 50%;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+}
+.list__left li {
+	padding: 5px 20px 5px 0;
+	border-right: 1px solid #777;
+	transition: 0.2s ease all;
+	cursor: pointer;
+}
+.list__left li:first-child {
+	margin-left: 10px;
+}
+.list__left li:hover {
+	color: rgb(0, 255, 21);
+	transition: 0.2s ease all;
+}
+@media (max-width: 667px) {
+	.menu__left {
+		padding-left: 20px;
+	}
+	.list__left {
+		display: none;
+	}
+	#burger__menu {
+		display: flex;
+		height: 50px;
+		align-items: center;
+	}
+}
+.menu__right {
+	width: 20%;
+}
+.list__right {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-right: 5px;
+	list-style-type: none;
+	color: #777;
+	transition: 0.2s ease all;
+}
+.list__right a {
+	color: #777;
+	text-decoration: underline;
+	font-size: 14px;
+}
+.list__right li:last-child {
+	margin-left: 15px;
+	font-size: 12px;
+}
+.list__right li:last-child span:hover {
+	text-decoration: underline;
+	transition: 0.2s ease all;
+}
+
+.list__right > li span:hover {
+	color: rgb(0, 255, 21);
+	transition: 0.2s ease all;
+}
+.list__right li a:hover {
+	color: rgb(0, 255, 21);
+	transition: 0.2s ease all;
+}
+@media (max-width: 667px) {
+	.menu__right {
+		width: 50%;
+	}
+}
+.main {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	background: url("../img/bg_2.jpeg") center / cover;
+}

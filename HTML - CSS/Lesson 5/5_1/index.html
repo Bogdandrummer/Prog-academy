@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Contact Form</title>
+</head>
+
+<body>
+	<form action="" class="wrapper">
+		<!--Top Form-->
+		<div class="form__top">
+			<h3>Contact Manager</h3>
+			<select name="act" id="act">
+				<option value="act1" selected="selected">More Actions</option>
+			</select>
+		</div>
+		<!--Main Form-->
+		<div class="main__form">
+			<!--Left-->
+			<div class="left__form">
+				<!--Name-->
+				<div class="form__item">
+					<div class="item_name">First Name <span>*</span></div>
+					<input type="text">
+				</div>
+				<!--Last Name-->
+				<div class="form__item">
+					<div class="item_name">Last Name <span>*</span></div>
+					<input type="text">
+				</div>
+				<!--Address-->
+				<div class="form__item">
+					<div class="item_name">Address</div>
+					<textarea name="textArea" id="" cols="19" rows="7" class="adress__text"></textarea>
+				</div>
+				<!--City-->
+				<div class="form__item">
+					<div class="item_name">City</div>
+					<input type="text">
+				</div>
+				<!--State-->
+				<div class="form__item">
+					<div class="item_name">State</div>
+					<select name="state_" id="" class="state">
+						<option value="act">- Select state -</option>
+					</select>
+				</div>
+				<!--Zip-->
+				<div class="form__item">
+					<div class="item_name">Zip</div>
+					<input type="text">
+				</div>
+				<!--Home Phone-->
+				<div class="form__item">
+					<div class="item_name">Home Phone</div>
+					<input type="text">
+				</div>
+				<!--Work Phone-->
+				<div class="form__item">
+					<div class="item_name">Work Phone <span>*</span></div>
+					<input type="text">
+				</div>
+				<!--Fax Number-->
+				<div class="form__item">
+					<div class="item_name">Fax Number</div>
+					<input type="text">
+				</div>
+				<!--Website-->
+				<div class="form__web">
+					<div class="item_name">Website</div>
+					<div class="web__right">
+						<div class="form__item">
+							<div class="item_name">URL</div>
+							<input type="text">
+						</div>
+						<div class="form__item">
+							<div class="item_name">Link Name</div>
+							<input type="text">
+						</div>
+					</div>
+				</div>
+
+				<!--Email Address-->
+				<div class="form__item">
+					<div class="item_name">Email Address <span>*</span></div>
+					<input type="text">
+				</div>
+			</div>
+			<!--Right Form-->
+			<div class="right_form">
+				<!--Radio 1-->
+				<div class="form__radio">
+					<div class="radio_left">
+						<div class="radio_name">When is the best time to contact you?</div>
+					</div>
+					<div class="radio_right">
+						<label>
+							<input type="radio" name="day" value="morning" /> Morning
+						</label>
+						<label>
+							<input type="radio" name="day" value="afternoon" /> Afternoon
+						</label>
+						<label>
+							<input type="radio" name="day" value="evening" /> Evening
+						</label>
+					</div>
+				</div>
+				<!--Radio 2-->
+				<div class="form__radio">
+					<div class="radio_left">
+						<div class="radio_name">When is the best time to contact you?</div>
+					</div>
+					<div class="radio_right">
+						<label>
+							<input type="radio" name="what" value="phone" /> Phone
+						</label>
+						<label>
+							<input type="radio" name="what" value="email" /> Email
+						</label>
+						<label>
+							<input type="radio" name="what" value="fax" /> Fax
+						</label>
+					</div>
+				</div>
+				<!--Message-->
+				<div class="form__item">
+					<div class="item_name">Message</div>
+					<textarea name="textArea" id="message" cols="19" rows="7" class="adress__text"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<!--Bottom Form-->
+		<div class="bottom__form">
+
+			<input type="submit" value="Submit" class="btn" />
+			<input type="reset" value="Reset" class="btn" />
+		</div>
+	</form>
+</body>
+
+</html>

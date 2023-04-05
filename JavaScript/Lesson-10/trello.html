@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.trello__body {
+			display: flex;
+
+		}
+
+		.trello__app {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: auto;
+		}
+
+		.trello__appItem {
+			width: 20%;
+			border: 1px solid #000;
+			text-align: center;
+			padding: 10px;
+		}
+
+		.trello__appTask {
+			text-align: justify;
+			padding: 5px;
+			border: 1px solid #000;
+		}
+
+		.trello__header {
+			text-align: center;
+		}
+
+		#sprint {
+			background: gray;
+		}
+
+		#todo {
+			background: darkred;
+		}
+
+		#review {
+			background: yellow;
+		}
+
+		#done {
+			background: green;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="trello__app">
+			<div class="trello__header">
+				<input type="text" id="inp"> <button id="btn">Add task</button>
+			</div>
+			<div class="trello__body">
+				<div class="trello__appItem" id="sprint">
+					<span>Sprint</span>
+					<div class="trello__appTask" draggable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+						Officia voluptatibus
+						in repellat veniam, a nobis iste numquam maiores quae sequi sint quaerat tenetur culpa laudantium
+						ipsam
+						error illo ea nulla.
+						<span class="closeBtn">X</span>
+					</div>
+				</div>
+				<div class="trello__appItem" id="todo">
+					<span>To Do</span>
+					<div class="trello__appTask"></div>
+				</div>
+				<div class="trello__appItem" id="review">
+					<span>Review</span>
+					<div class="trello__appTask"></div>
+				</div>
+				<div class="trello__appItem" id="done">
+					<span>Done</span>
+					<div class="trello__appTask"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		const poligons = document.querySelectorAll('.trello__appItem');
+		const inp = document.querySelector('#inp');
+		const btn = document.querySelector('#btn');
+		const task = document.querySelectorAll('.trello__appTask');
+		const sprintPoligon = document.querySelector('#sprint');
+		const closeBtn = document.querySelector('.closeBtn');
+		let draggableTask;
+
+
+		btn.addEventListener('click', addTask);
+		closeBtn.addEventListener('click', removeTask);
+
+		function removeTask() {
+			this.parentElement.remove();
+		}
+		for (i = 0; i < poligons.length; i++) {
+			poligons[i].addEventListener('dragover', prevent);
+			poligons[i].addEventListener('drop', dropTask);
+		}
+		function dropTask() {
+			this.appendChild(draggableTask);
+		}
+
+		function prevent(e) {
+			e.preventDefault();
+		}
+
+
+		for (i = 0; i < task.length; i++) {
+			task[i].addEventListener('dragstart', startToDragTask);
+		}
+		function startToDragTask(e) {
+			draggableTask = e.target;
+		}
+		btn.addEventListener('click', addTask);
+
+		function addTask() {
+			const task = document.createElement('div');
+			task.setAttribute('draggable', 'true');
+			task.classList.add('trello__appTask');
+			task.innerText = inp.value;
+			task.addEventListener('dragstart', startToDragTask);
+			sprint.appendChild(task);
+			inp.value = "";
+			let span = createCloseBtn();
+			task.appendChild(span);
+		}
+		function createCloseBtn() {
+			let span = document.createElement('span');
+			span.classList.add('closeBtn');
+			span.innerText = 'X';
+			span.addEventListener('click', removeTask);
+			return span;
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+}
+body {
+	background: url("../img/car.jpg") center / cover no-repeat;
+	padding: 15px;
+	font-family: "Alegreya", serif;
+}
+h1 {
+	font-weight: 500;
+}
+.content {
+	display: flex;
+	position: relative;
+	z-index: 1;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.baner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: rgba(150, 150, 150, 0.7);
+	width: 700px;
+	height: 250px;
+	margin: auto;
+	padding: 20px 15px;
+	align-items: center;
+	border-radius: 5px;
+}
+@media (max-width: 667px) {
+	.baner {
+		height: 400px;
+	}
+}
+.baner__title {
+	display: block;
+	width: 100%;
+	color: rgb(170, 10, 20);
+	font-size: 45px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.baner__text {
+	font-size: 25px;
+	text-align: center;
+	font-weight: 500;
+}
+.banner__button {
+	border: 1px rgb(180, 10, 20) solid;
+	border-radius: 6px;
+	color: #333;
+	background-color: rgba(200, 20, 20, 0.3);
+	width: 250px;
+	height: 40px;
+	align-items: flex-end;
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+@media (max-width: 667px) {
+	.banner__button {
+		margin-bottom: 15px;
+		min-height: 60px;
+	}
+}
+.dotts {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	position: absolute;
+	bottom: 30px;
+	left: 45%;
+	z-index: 2;
+	width: 160px;
+	height: 25px;
+	border-radius: 5px;
+	background-color: rgba(200, 200, 200, 0.1);
+	font-size: 30px;
+}
+.dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: 1px solid rgba(200, 20, 20, 0.5);
+	background-color: rgba(200, 20, 20, 0.5);
+}
+.arrows {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	z-index: 2;
+	width: 100px;
+	height: 35px;
+	color: rgba(200, 20, 20, 0.5);
+	background-color: rgba(200, 200, 200, 0.1);
+	border-radius: 5px;
+	font-size: 30px;
+}
+@media (max-width: 667px) {
+	.dotts {
+		right: 0;
+		left: 0;
+		margin: auto;
+	}
+	.arrows {
+		bottom: 60px;
+		right: 0;
+		left: 0;
+		margin: auto;
+	}
+}

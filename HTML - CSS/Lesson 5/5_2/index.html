@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="libs/fontawesome/css/all.css">
+	<title>Form-2</title>
+</head>
+
+<body>
+	<form action="" name="main" value="" class="main__form">
+		<!--Имя-->
+		<div class="main__item">
+			<div class="item__name">Твоё имя</div>
+			<input type="text" class="form__item" name="name">
+		</div>
+		<!--Email-->
+		<div class="main__item">
+			<div class="item__name">Твой email</div>
+			<input type="text" class="form__item" name="email">
+		</div>
+		<!--Тема сообщения-->
+		<div class="main__item">
+			<div class="item__name" id="t__msg">Тема сообщения</div>
+			<select name="message" id="" class="msg">
+				<option value="t1">Тема 1</option>
+				<option value="t2">Тема 2</option>
+				<option value="t3">Тема 3</option>
+			</select>
+		</div>
+		<!--Текст-->
+		<div class="main__item" id="txt">
+			<div class="item__name">Текст <span>*</span></div>
+			<textarea name="txt" id="" cols="70" rows="10" class="t_area"></textarea>
+		</div>
+		<!--Защита от спама-->
+		<div class="main__item" id="spam__row">
+			<div class="item__name">Защита от спама <span>*</span></div>
+			<input type="text" class="form__item" name="email" id="spam">
+			<!--Капча-->
+			<div class="main__item" id="cpt">
+				<div class="captcha"><img src="img/avoid-captcha.jpg" alt="captcha"></div>
+				<i class="fa-solid fa-rotate"></i>
+				<a href="#">Сменить картинку</a>
+			</div>
+		</div>
+		<!--Отправить-->
+		<div class="main__item">
+			<div class="item__name"></div>
+			<input type="submit" name="subm" value="Отправить" class="button" />
+		</div>
+	</form>
+</body>
+
+</html>

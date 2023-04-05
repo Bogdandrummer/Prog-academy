@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div {
+			height: 350px;
+			border: 1px solid black;
+		}
+
+		img {
+			height: 200px;
+
+
+		}
+	</style>
+</head>
+
+<body>
+	<div class="firstPoligon">
+		<img src="18Pe.gif" alt="no_image" draggable="true">
+	</div>
+	<div class="secondPoligon"></div>
+	<script>
+		const firstPoligon = document.querySelector('.firstPoligon');
+		const secondPoligon = document.querySelector('.secondPoligon');
+		const img = document.querySelector('img');
+		firstPoligon.addEventListener('dragover', function (e) {
+			e.preventDefault();
+		});
+		firstPoligon.addEventListener('drop', function (e) {
+			this.appendChild(img);
+		});
+		secondPoligon.addEventListener('dragover', function (e) {
+			e.preventDefault();
+		});
+		secondPoligon.addEventListener('drop', function (e) {
+			this.appendChild(img);
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Football</title>
+	<style>
+		.score {
+			display: flex;
+			flex-direction: column;
+			width: 200px;
+			height: 100px;
+			border: 5px solid brown;
+			border-radius: 10px;
+			background-color: green;
+			color: white;
+			font-size: 30px;
+			text-align: center;
+			margin: auto;
+			justify-content: center;
+		}
+
+		.num {
+			font-size: 60px;
+			text-align: center;
+
+			margin: 20px;
+		}
+
+		.wrapper {
+			display: flex;
+			position: relative;
+			width: 100%;
+			height: 70vh;
+			background: green;
+		}
+
+		.line {
+			margin: auto;
+			border: 2px solid white;
+			height: 100%;
+			width: 0;
+		}
+
+		.gates {
+			width: 100px;
+			height: 200px;
+			border: 4px solid white;
+			margin: auto 4px;
+		}
+
+		.ball {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 50%;
+			bottom: 50%;
+			margin: auto;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+		}
+
+		.hovered {
+			background: aquamarine;
+		}
+
+		.hidden {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="score"><span>Рахунок</span>
+		<div>
+			<span class="num" id="sc1"></span>
+			<span class="num" id="sc2"></span>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="gates" id="gates1"></div>
+		<div class="line"></div>
+		<img class="ball" src="ball.png" alt="#" draggable="true"></img>
+		<div class="gates" id="gates2"></div>
+	</div>
+
+
+	<script>
+		const ball = document.querySelector('.ball');
+		const gates1 = document.querySelector('#gates1');
+		const gates2 = document.querySelector('#gates2');
+		const sc1 = document.querySelector('#sc1');
+		const sc2 = document.querySelector('#sc2');
+		let g1 = 0;
+		let g2 = 0;
+
+		sc1.innerText = g1;
+		sc2.innerText = g2;
+		const dragStart = function () {
+			setTimeout(() => {
+				this.classList.add('hide');
+			}, 0);
+		};
+		const dragEnter = function (e) {
+			e.preventDefault();
+			this.classList.add('hovered');
+		}
+		const dragDrop = function () {
+			this.classList.remove('hovered');
+
+		}
+		const dragLeave = function () {
+			this.classList.remove('hovered');
+		}
+		const dragEnd = function () {
+			this.classList.remove('hide');
+		}
+		const dragOver = function () {
+			event.preventDefault();
+		}
+		const goal1 = function () {
+			g1 += 1;
+			sc1.innerText = g1;
+
+		}
+		const goal2 = function () {
+			g2 += 1;
+			sc2.innerText = g2;
+
+		}
+
+
+		ball.addEventListener('dragstart', dragStart);
+
+		gates1.addEventListener('dragenter', dragEnter);
+		gates1.addEventListener('dragend', dragEnd);
+		gates1.addEventListener('dragleave', dragLeave);
+		gates1.addEventListener('drop', dragDrop);
+		gates1.addEventListener('dragover', dragOver);
+		gates1.addEventListener('drop', goal1);
+
+		gates2.addEventListener('dragenter', dragEnter);
+		gates2.addEventListener('dragend', dragEnd);
+		gates2.addEventListener('dragleave', dragLeave);
+		gates2.addEventListener('dragover', dragOver);
+		gates2.addEventListener('drop', goal2);
+		gates2.addEventListener('drop', dragDrop);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+
+</html>

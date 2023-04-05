@@ -1,0 +1,140 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	max-width: 100%;
+}
+.header {
+	display: flex;
+	flex: 0 1 auto;
+}
+.menu {
+	width: 100%;
+	height: 50px;
+}
+.menu__list {
+	display: grid;
+	grid-template-columns: 1fr minmax(90px, 2fr) repeat(4, minmax(90px, 1fr)) 2fr;
+	grid-template-rows: 50px;
+	align-items: center;
+	font-size: 18px;
+	text-transform: uppercase;
+	background-color: #eee;
+}
+.burger {
+	display: none;
+	position: relative;
+}
+@media (max-width: 997px) {
+	.menu__list {
+		font-size: 15px;
+	}
+}
+.menu__list li {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-around;
+	list-style: none;
+	border-left: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	padding: 0 10px;
+	height: 50px;
+	color: #444;
+	transition: all 0.2s ease-in-out;
+}
+.sub__menu {
+	display: none;
+	position: absolute;
+	opacity: 0;
+	z-index: 1;
+	bottom: -50px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 50px;
+	background-color: #eee;
+}
+.menu__list li:hover {
+	background-color: #ccc;
+	font-size: 17px;
+	transition: all 0.2s ease-in-out;
+}
+.menu__list li:hover > div {
+	display: flex;
+	transition: all 0.2s ease-in-out;
+	opacity: 1;
+	font-size: 18px;
+	align-items: center;
+	padding-left: 30px;
+}
+.menu__list li:hover > div:hover {
+	transition: all 0.2s ease-in-out;
+	font-size: 18px;
+	background-color: #ccc;
+}
+.menu__list li:first-child {
+	font-weight: 700;
+	color: #000;
+}
+@media (max-width: 667px) {
+	.comtent,
+	.main {
+		min-width: 420px;
+	}
+	.menu {
+		display: flex;
+		align-items: center;
+	}
+	.menu__list {
+		display: none;
+	}
+	.burger {
+		display: inline-block;
+		font-size: 40px;
+		align-items: center;
+		margin: 0 0 0 20px;
+	}
+	.burger:hover + .menu__list,
+	.menu__list:hover {
+		display: grid;
+		position: absolute;
+		top: 50px;
+		left: 20px;
+		z-index: 0;
+		padding: 0 25px 0 15px;
+		grid-template-rows: repeat(7, 50px);
+		grid-template-columns: 200px;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #ccc;
+	}
+	.menu__list > li {
+		justify-content: space-between;
+		width: 100%;
+		border: none;
+	}
+	.sub__menu {
+		left: 221px;
+		top: -50px;
+		bottom: none;
+		right: -100;
+		width: 120px;
+		text-align: center;
+	}
+}
+.main {
+	display: flex;
+	flex: 1 0 auto;
+	background: url("../img/bg.jpg") center / cover no-repeat;
+}
+@media (max-height: 700px) {
+	.main {
+		background: url("../img/bg.jpg") contain 100% / cover no-repeat;
+		min-height: 420px;
+	}
+}

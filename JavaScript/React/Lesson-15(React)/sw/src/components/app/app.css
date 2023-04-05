@@ -1,0 +1,8 @@
+html {
+	margin: 0;
+}
+body {
+	display: flex;
+	justify-content: center;
+	background: url("../../../public/img/background.jpg") 0 0 / cover repeat;
+}

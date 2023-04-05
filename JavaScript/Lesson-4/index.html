@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 4</title>
+	<script>
+		/*
+		//Задание 1
+		let arr = [];
+		const count = prompt('Введите количество элементов будущего массива');
+		for (let i = 0; i < count; i++) {
+			arr[i] = prompt(`Введите элемент массива ${i + 1}:`);
+		}
+		document.write('Вы ввели такой массив: <br>');
+		for (let i = 0; i < arr.length; i++) {
+			document.write(`Элемент ${i} : ${arr[i]} <br>`);
+		}
+		// Метод join
+		let chgArr = arr.join(" // <br>");
+		document.write('<br> Метод join: <br> ', chgArr);
+		// Метод concat
+		let Arr2 = ["метод", "массива", "concat"];
+		concArr = arr.concat(Arr2);
+		document.write('<br> <br> Метод Concat. Результат: <br>');
+		for (let i = 0; i < concArr.length; i++) {
+			document.write(`Элемент ${i + 1} - ${concArr[i]} <br>`);
+		}
+		// Метод reverse
+		let revArr = arr.reverse();
+		document.write('<br> Метод reverse: <br>');
+		for (let i = 0; i < revArr.length; i++) {
+			document.write(`Элемент ${i + 1} - ${revArr[i]} <br>`);
+		}
+
+		//Метод slice
+		let sliceArr = arr.slice(0, 1);
+		document.write('<br><br> Метод slice. Введены параметры slice(0,1): <br>');
+		for (let i = 0; i < sliceArr.length; i++) {
+			document.write(`Элемент ${i + 1} - ${sliceArr[i]} <br>`);
+		}
+		document.write('<br> Вариант 2. Введено slice(2): <br>');
+		sliceArr = arr.slice(2);
+		for (let i = 0; i < sliceArr.length; i++) {
+			document.write(`Элемент ${i + 1} - ${sliceArr[i]} <br>`);
+		}
+		//Метод Splice
+
+		//Вариант 1
+		let arrSpl1 = [...arr];
+		let del1 = arrSpl1.splice(2, 3);
+		document.write('<br> <br> Метод Splice. <br> Вариант 1. Удаление. Введено Splice(2,3), на выводе будут удалённые элементы массива: <br>');
+		for (let i = 0; i < del1.length; i++) {
+			document.write(`Элемент ${i + 1} - ${del1[i]} <br>`);
+		}
+		document.write('<br>Массив, к которому применили splice. Остаток: <br>');
+		for (let i = 0; i < arrSpl1.length; i++) {
+			document.write(`Элемент ${i + 1} - ${arrSpl1[i]} <br>`);
+		}
+
+		//Вариант 2
+		let arrSpl2 = [...arr];
+		insert = arrSpl2.splice(1, 3, "Новый элемент 1", "Новый элемент 2", "Новый элемент 3");
+		document.write('<br><br>Вариант 2. Удаление, а затем вставка. <br>Введено splice(1,3,"Новый элемент 1", "Новый элемент 2", "Новый элемент 3")<br> Массив после удаления и вставки:<br>');
+		for (let i = 0; i < arrSpl2.length; i++) {
+			document.write(`Элемент ${i + 1} - ${arrSpl2[i]} <br>`);
+		}
+		//Метод sort()
+		document.write('<br> <br>Метод Sort(). Сортируем массив в алфавитном порядке:<br>');
+
+		arr.sort();
+		for (let i = 0; i < arr.length; i++) {
+			document.write(`Элемент ${i + 1} - ${arr[i]} <br>`);
+		}
+		// Метод push
+		document.write('<br> <br> Метод push. Добавляем к массиву элементы "Number", исходный массив arr, "Something": <br>');
+		let pushArr = [...arr];
+		pushArr.push("Number", arr, "Something");
+		for (let i = 0; i < pushArr.length; i++) {
+			document.write(`Элемент ${i + 1} - ${pushArr[i]} <br>`);
+		}
+		// Метод pop
+		document.write('<br><br>Метод pop. Удалим последний элемент массива:<br>');
+		let delPop = pushArr.pop();
+		for (let i = 0; i < pushArr.length; i++) {
+			document.write(`Элемент ${i + 1} - ${pushArr[i]} <br>`);
+		}
+		//Метод unshift
+		document.write('<br><br>Метод Unshift. Добавим в начало массива удалённый элемент методом pop:<br>');
+		let shiftEl = pushArr.unshift(delPop);
+		for (let i = 0; i < pushArr.length; i++) {
+			document.write(`Элемент ${i + 1} - ${pushArr[i]} <br>`);
+		}
+		//Метод shift
+		document.write('<br><br>Метод Unshift. Удалим с начала массива элемент, добавленный методом unshift:<br>');
+		pushArr.shift(shiftEl);
+		for (let i = 0; i < pushArr.length; i++) {
+			document.write(`Элемент ${i + 1} - ${pushArr[i]} <br>`);
+		} */
+
+
+		//Задание №2. Функция, которая определяет максимальное число в массиве
+		/*
+		let count = +prompt('Введите длину массива:');
+		let array = [];
+		for (let i = 0; i < count; i++) {
+			array[i] = +prompt(`Введите ${i + 1}-й элемент массива(число):`);
+		}
+		function getMinAndMax(array) {
+			let max = array[0];
+			let min = array[0];
+			for (let i = 1; i < array.length; i++) {
+				if (array[i] < array[i - 1]) {
+					min = array[i];
+				}
+				if (array[i] > array[i - 1]) {
+					max = array[i];
+				}
+			}
+			return document.write(`Минимальное число массива :${min};<br> Максимальное число массива: ${max}<br>`);
+		}
+		getMinAndMax(array); */
+
+
+		//Задание 3. Вывести массив с диапазоном элементов, которые укажет пользователь
+		/*
+		let Arr = ["Mersedes", "Audi", "BMW", "Ford", "Bentley", "Wolkswagen", "Mazda", "Lexus", "Kia", "Scoda"];
+		let usrArr = [];
+		const start = prompt('Введите, с какого элемента начать вывод массива:');
+		const end = prompt('Введите, до какого элемента выводить массив:');
+		document.write('<br>Начальный массив:<br>');
+		for (let i = 0; i < Arr.length; i++) {
+			document.write(`<br> ${i + 1}: ${Arr[i]}`);
+		}
+		document.write('<br><br>Результат:<br>');
+		usrArr = Arr.slice(start - 1, end);
+		for (let i = 0; i < usrArr.length; i++) {
+			document.write(`<br> ${i + 1}: ${usrArr[i]}`);
+		}
+		*/
+
+
+		//Задание 4. Отсортировать массив из 10 чисел в порядке возрастания. Использовать метод sort()
+		/*
+		let arr = [];
+		for (let i = 0; i < 10; i++) {
+			arr[i] = prompt(`Введите число ${i} :`);
+		}
+		let output = arr.sort(function (a, b) { return a - b });
+		for (let i = 0; i < output.length; i++) {
+			document.write(`<br>Элемент ${i} : ${output[i]}<br>`);
+			
+		}
+		*/
+
+		//Задание 5. Вставка введенного пользователем элемента в указанное пользователем место массива
+		//Способ по проще
+		/*
+		let arr = ["12", "input", "word", "123asd", "element", "car", "massive", "game", "js", "990"];
+		const pos = +prompt('Введите, с какую ячейку добавить новый эллемент массива? От 1 до 10:');
+		arr[pos - 1] = prompt('Введите новый елемент массива:');
+		for (let i = 0; i < arr.length; i++) {
+			document.write(`<br>${i + 1}) ${arr[i]} <br>`);
+		} */
+		//Способ splice
+		/*
+		let arr = ["12", "input", "word", "123asd", "element", "car", "massive", "game", "js", "990"];
+		let newArr = [];
+		const pos = +prompt('Введите, с какую ячейку добавить новый эллемент массива? От 1 до 10:');
+		const inp = prompt('Введите новый елемент массива:');
+		arr.splice(pos - 1, 0, inp);
+		for (let i = 0; i < arr.length; i++) {
+			document.write(`<br>${i + 1}) ${arr[i]} <br>`);
+		} */
+
+		//Задание №6. Получить предпоследний элемент массива 3-мя сопособами
+		//Способ 1
+		/*
+		let year = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+		let a = year[year.length - 2];
+		document.write(`<br> ${a}`); */
+
+		//Способ 2
+		/*
+		let year = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+		let a = year.slice(-2, -1);
+		document.write(`<br> ${a}`); */
+
+		//Способ 3 
+		/* let year = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+		let a = year.splice(-2, 1);
+		document.write(`<br> ${a}`); */
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

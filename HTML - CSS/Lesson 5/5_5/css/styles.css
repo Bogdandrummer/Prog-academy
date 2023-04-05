@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 100vh;
+	background: url("../img/bck.jpg") 0 0 / cover no-repeat;
+}
+.wrapper {
+	width: 450px;
+	margin: 50px auto;
+	box-shadow: 2px -2px 8px #888;
+	opacity: 0.8;
+	background-color: #fff;
+}
+.form__title {
+	display: flex;
+	align-items: center;
+	height: 70px;
+	margin: 0 0 30px 0;
+	padding: 0 0 0 30px;
+	background-color: #eee;
+	border-bottom: 1px solid #aaa;
+	font-weight: 400;
+}
+.wrapper__item {
+	display: flex;
+	align-items: center;
+	margin: 20px 0 20px 0;
+	padding: 0 0 0 30px;
+}
+.item__name {
+	width: 30%;
+	color: #555;
+}
+.form__input {
+	width: 60%;
+	height: 35px;
+	border: 1px solid #999;
+	box-shadow: 1px 1px 2px #ccc;
+	font-size: 16px;
+	padding: 0 15px;
+}
+#mail::after {
+	content: "";
+	width: 30px;
+	height: 30px;
+	border-left: 1px solid #aaa;
+	background: url("../img/user.png") 50% 50% / 20px 20px no-repeat;
+	margin-left: -35px;
+	color: #000;
+	opacity: 0.5;
+}
+#fgt {
+	margin-left: 30%;
+}
+#pass::after {
+	content: "";
+	width: 30px;
+	height: 30px;
+	background: url("../img/lock.jpg") 50% 50% / 20px 20px no-repeat;
+	border-left: 1px solid #aaa;
+	margin-left: -35px;
+	color: #000;
+	opacity: 0.5;
+}
+.forgot {
+	font-size: 12px;
+	color: rgb(0, 131, 253);
+	letter-spacing: 0.7px;
+}
+#rmb {
+	margin-left: 30%;
+	font-weight: 700;
+}
+
+#btn {
+	justify-content: flex-end;
+	gap: 20px;
+	height: 70px;
+	margin: 30px 0 0 0;
+	padding-right: 50px;
+	border-top: 1px solid #aaa;
+	background-color: #ccc;
+}
+.register {
+	width: 100px;
+	height: 35px;
+	background-color: #aaa;
+	color: #fff;
+	font-size: 16px;
+	border-style: none;
+}
+.login {
+	width: 100px;
+	height: 35px;
+	background-color: rgb(0, 131, 253);
+	color: #fff;
+	font-size: 16px;
+	border-style: none;
+}
