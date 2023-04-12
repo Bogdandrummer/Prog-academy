@@ -1,0 +1,358 @@
+@import "_null"; /*Обнуляющие стили*/
+@import "_fonts"; /*Шрифты*/
+
+.wrapper {
+	display: flex;
+	margin: auto;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#041016+0,06181e+50,04151c+51,08222a+100 */
+	background: rgb(4, 16, 22); /* Old browsers */
+	background: -moz-linear-gradient(
+		left,
+		rgb(4, 16, 22) 0%,
+		rgb(6, 24, 30) 50%,
+		rgb(4, 21, 28) 51%,
+		rgb(8, 34, 42) 100%
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		left,
+		rgb(4, 16, 22) 0%,
+		rgb(6, 24, 30) 50%,
+		rgb(4, 21, 28) 51%,
+		rgb(8, 34, 42) 100%
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to right,
+		rgb(4, 16, 22) 0%,
+		rgb(6, 24, 30) 50%,
+		rgb(4, 21, 28) 51%,
+		rgb(8, 34, 42) 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#041016', endColorstr='#08222a',GradientType=1 ); /* IE6-9 */
+}
+.content {
+	width: 1440px;
+	margin: 0 auto;
+	border: 1px solid #000;
+}
+
+//Header
+.header {
+}
+.header__row {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: 1244px;
+	background: url("/img/bg_header.png") 50% / cover no-repeat;
+	z-index: 1;
+	padding: 0 165px;
+}
+
+//Адаптив Wrapper, Content и Header
+@media (max-width: 997px) {
+	.wrapper {
+		min-width: 700px;
+	}
+	.content {
+		width: 100%;
+	}
+	.header__row {
+		padding: 0 20px;
+		background-size: cover;
+		background-position: 50%;
+	}
+}
+.header__top {
+	display: flex;
+}
+
+//Меню
+.menu {
+	max-width: 715px;
+	position: relative;
+	z-index: 5;
+	flex: 0 1 100%;
+	height: 80px;
+}
+.menu__list {
+	display: flex;
+	flex: 1 1 100%;
+	justify-content: space-around;
+	align-items: center;
+	color: #fff;
+	font-family: "Oswald";
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	li {
+		min-width: 90px;
+		padding-left: 15px;
+	}
+	span {
+		margin-left: 12px;
+	}
+}
+.menu__btn {
+	display: none;
+	font-size: 40px;
+	margin: 70px 20px 20px 10px;
+}
+#burger {
+	color: #43ffd2;
+	&:hover {
+		color: #95ffe6;
+	}
+}
+
+.menu__item {
+	position: relative;
+	transition: 150ms all;
+	i {
+		margin-right: 10px;
+	}
+}
+.menu__list li:hover,
+.menu__list a:hover {
+	transition: 150ms all;
+	color: #43ffd2;
+	text-decoration: underline;
+}
+
+.sub__menu {
+	display: none;
+	position: absolute;
+	z-index: 2;
+	top: 50px;
+	left: 0;
+	width: 260px;
+	padding-bottom: 10px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.sub__menu a {
+	color: #ffffff;
+}
+.sub__item {
+	margin-top: 5px;
+}
+
+//Адаптив меню
+@media (max-width: 997px) {
+	.menu {
+		max-width: 100%;
+	}
+	.menu__list {
+		display: none;
+		flex: 1 0 100%;
+		flex-direction: column;
+		justify-content: start;
+		align-items: start;
+		width: 100%;
+		height: 90vh;
+		margin-top: 40px;
+		padding-bottom: 20px;
+		z-index: 4;
+		background: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(10px);
+		li {
+			margin-top: 10px;
+			font-size: 1.5rem;
+		}
+	}
+	.menu__btn {
+		display: block;
+	}
+	.sub__menu {
+		top: 0;
+		left: 200px;
+		margin: 0;
+		border: 1px solid #43ffd2;
+		backdrop-filter: none;
+		background-color: none;
+	}
+}
+
+//Адрес
+.header__address {
+	position: absolute;
+	top: 0;
+	right: 165px;
+	margin-left: 149px;
+	margin-top: 20px;
+	text-align: right;
+	font-family: "Oswald";
+}
+.address__title {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 21px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #43ffd2;
+}
+.address__text,
+.address__text > p {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 10px;
+	line-height: 15px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.address__b {
+	margin-top: 25px;
+}
+.address__icons {
+	position: absolute;
+	top: 190px;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	font-size: 24px;
+	width: 60px;
+	height: 154px;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: rgba(40, 40, 40, 0.3);
+}
+
+//Адаптив блока Адрес
+@media (max-width: 1315px) {
+	.header__address {
+		right: 50px;
+	}
+}
+@media (max-width: 1185px) {
+	.header__address {
+		display: none;
+	}
+}
+@media (max-width: 997px) {
+	.header__address {
+		top: 150px;
+		z-index: 5;
+	}
+	.address__icons {
+		background-color: rgba(40, 40, 40, 0);
+		top: 150px;
+	}
+}
+
+//Текстовая часть Header
+.header__main {
+}
+.header__title {
+	position: absolute;
+	text-align: center;
+	z-index: 0;
+	left: 0;
+	right: 0;
+	margin-top: 42px;
+	color: #ffffff;
+}
+.big__title {
+	font-family: "Cormorant";
+	font-style: normal;
+	font-weight: 300;
+	font-size: 200px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+.big__title-bottom {
+	margin-top: -45px;
+}
+
+//Адаптив big__title
+@media (max-width: 1315px) {
+	.big__title {
+		font-size: 120px;
+	}
+	.big__title-bottom {
+		margin-top: -20px;
+	}
+}
+
+@media (max-width: 997px) {
+	.header__title {
+		top: 35px;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+@media (max-width: 710px) {
+	.big__title {
+		font-size: 90px;
+	}
+	.little__title {
+		font-size: 16px;
+	}
+	.header__title {
+		top: 20px;
+	}
+}
+.little__title {
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.05em;
+	margin-top: 40px;
+}
+
+.ellipse__blue__header {
+	position: absolute;
+	width: 358.9px;
+	height: 293.05px;
+	left: 15%;
+	top: 365px;
+	background: #249479;
+	filter: blur(125px);
+	transform: rotate(41.6deg);
+	z-index: -1;
+}
+.ellipse__pink__header {
+	position: absolute;
+	width: 472.65px;
+	height: 211.05px;
+	right: 15%;
+	top: 350px;
+	background: #7d2253;
+	filter: blur(125px);
+	transform: rotate(-43.21deg);
+	z-index: -1;
+}
+
+//Фигуры в блюре для фона
+.ellipse_blue {
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	width: 879.44px;
+	height: 211.05px;
+	background: #43ffd2;
+	filter: blur(125px);
+	transform: rotate(32.83deg);
+}
+.ellipse_pink {
+	position: absolute;
+	width: 707.54px;
+	height: 236.87px;
+	top: 50%;
+	left: 20%;
+	background: #7d2253;
+	filter: blur(125px);
+	transform: rotate(32.83deg);
+}
