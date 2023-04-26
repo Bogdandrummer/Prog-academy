@@ -6,7 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lover Flower</title>
+	<!--Css-->
 	<link rel="stylesheet" href="css/style.css">
+	<!--FontAwesome-->
 	<link rel="stylesheet" href="libs/fontawesome/css/all.css">
 </head>
 
@@ -14,8 +16,8 @@
 <div class="wrapper">
 
 	<!--Header-->
-	<header class="header content">
-		<div class="header__row">
+	<header class="header ">
+		<div class="header__row content">
 			<div class="header__top">
 				<!--Menu-->
 				<nav class="menu">
@@ -65,6 +67,12 @@
 						<i class="fa-brands fa-viber" style="color: #43FFD2"></i>
 						<i class="fa-solid fa-phone-volume" style="color: #43FFD2"></i>
 					</div>
+					<div class="address__contacts">
+						<div class="address__phone">+380 (98)-111-22-33</div>
+						<div class="address__call"><i class="fa-solid fa-phone" style="color:#43FFD2"></i> Замовити дзвінок
+						</div>
+						<div class="cart__shopping"><i class="fa-solid fa-cart-shopping" style="color:#43FFD2"></i></div>
+					</div>
 				</div>
 			</div>
 			<!--Текстовый блок-->
@@ -73,18 +81,153 @@
 					<p class="big__title">Lover</p>
 					<p class="big__title big__title-bottom">Flower</p>
 					<p class="little__title">Створюємо для тих, хто цінить свіжість та вишуканість квітки</p>
+					<button class="button__catalog"><a id="btn__ctg" href="">Переглянути Каталог</a></button>
 				</div>
 			</div>
 			<div class="ellipse__blue__header"></div>
 			<div class="ellipse__pink__header"></div>
+			<div class="header__gradient"></div>
 		</div>
 	</header>
 
+	<!--Main Блок-->
+	<main class="main">
+		<div class="main__row">
+
+			<!--Каталог-->
+			<div class="main__catalog content">
+				<div class="main__title">
+					<h1 class="title">Каталог</h1>
+					<p class="main__caption">У нас найбільший вибір квітів, букетів, листівок та подарунків.
+						Ми завжди допоможемо вам підібрати букет для вашої події. Наш менеджер проконсультує Вас та допоможе
+						визначитись з вибором</p>
+					<p class="main__caption">Ознайомтесь з нашим каталогом</p>
+				</div>
+
+				<!--Каталог-карточки-->
+				<div class="catalog__items">
+					<!--Item1-->
+					<div class="catalog__item-1">
+						<h3 class="cat__item-title">Квіти</h3>
+						<ul class="cat__item-text">
+							<li>Збірні букети</li>
+							<li>Монобукети</li>
+							<li>Композиції з квітів</li>
+							<li>Троянди</li>
+							<li>Весільні</li>
+						</ul>
+						<div class="cat__item-link"><a href="">Переглянути каталог</a></div>
+					</div>
+					<!--Item2-->
+					<div class="catalog__item-2">
+						<h3 class="cat__item-title">Готові букети із сухоцвіту</h3>
+						<ul class="cat__item-text">
+							<li>Букети</li>
+							<li>Для інтер'єру</li>
+							<li>Композиції</li>
+						</ul>
+						<div class="cat__item-link"><a href="">Переглянути каталог</a></div>
+					</div>
+					<!--Item3-->
+					<div class="catalog__item-3">
+						<h3 class="cat__item-title">Додатково</h3>
+						<ul class="cat__item-text">
+							<li>Кульки</li>
+							<li>Іграшки</li>
+							<li>Листівки</li>
+							<li>Упаковка</li>
+						</ul>
+						<div class="cat__item-link"><a href="">Переглянути каталог</a></div>
+					</div>
+					<div class="main__flowers">Квіти</div>
+					<div class="main__buket">Букети</div>
+					<div class="main__add">Додатково</div>
+					<div class="main__blue-ellipse"></div>
+					<div class="main__pink-ellipse"></div>
+
+				</div>
+
+			</div>
+
+			<!--Популярные букеты-->
+			<div class="popular__bukets">
+				<div class="bukets__row content">
+					<div class="bukets__bg"></div> <!--Фоновая картинка-->
+					<h2 class="buket__title p1">Популярні</h2>
+					<h2 class="buket__title p2">букети</h2>
+					<h5 class="buket__subtitle">Улюблені композиції наших клієнтів</h5>
+
+					<!--Слайдер-->
+					<div class="buket__slider">
+						<!--Кнопки слайдера-->
+						<div class="prev__arrow"><i class="fa-solid fa-arrow-left"></i></div>
+						<div class="next__arrow"><i class="fa-solid fa-arrow-right"></i></div>
+						<!--Список элементов слайдера-->
+						<ul id="buket__slides" class="buket__slides">
+							<div class="slider__line">
+								<!--Item 1-->
+								<li class="buket__item">
+									<div class="buket__item-row">
+										<div class="new">NEW</div>
+										<img src="/img/main slider/1.png" alt="1" class="buket__img">
+										<div class="buket__cart-title">Кращий день</div>
+										<div class="buket__price">300 грн</div>
+										<button class="buy__item">Додати в кошик</button>
+									</div>
+								</li>
+								<!--Item 2-->
+								<li class="buket__item">
+									<div class="buket__item-row">
+										<img src="/img/main slider/2.png" alt="2" class="buket__img">
+										<div class="buket__cart-title">Кращий день</div>
+										<div class="buket__price">350 грн</div>
+										<button class="buy__item">Додати в кошик</button>
+									</div>
+								</li>
+								<!--Item 3-->
+								<li class="buket__item">
+									<div class="buket__item-row">
+										<div class="sale">SALE</div>
+										<img src="/img/main slider/3.png" alt="3" class="buket__img">
+										<div class="buket__cart-title">Кращий день</div>
+										<div class="buket__price">300 грн</div>
+										<button class="buy__item">Додати в кошик</button>
+									</div>
+								</li>
+								<!--Item 4-->
+								<li class="buket__item">
+									<div class="buket__item-row">
+										<div class="new">NEW</div>
+										<img src="/img/main slider/4.png" alt="4" class="buket__img">
+										<div class="buket__cart-title">Кращий день</div>
+										<div class="buket__price">300 грн</div>
+										<button class="buy__item">Додати в кошик</button>
+									</div>
+								</li>
+								<!--Item 5-->
+								<li class="buket__item">
+									<div class="buket__item-row">
+										<img src="/img/main slider/5.png" alt="5" class="buket__img">
+										<div class="buket__cart-title">Кращий день</div>
+										<div class="buket__price">300 грн</div>
+										<button class="buy__item">Додати в кошик</button>
+									</div>
+								</li>
+							</div>
+						</ul>
+					</div> <!--Конец слайдера-->
+					<a href="" class="cat__all-link">Переглянути весь каталог <i class="fa-solid fa-arrow-right"></i></a>
+					<!--Эллипсы-->
+					<div class="buket__blue-ellipse"></div>
+					<div class="buket__pink-ellipse"></div>
+				</div>
+			</div>
+
+		</div> <!--main-row-->
+	</main>
 
 
-
-</div>
-
+</div> <!--Wrapper-->
 <script src="js/index.js"></script>
 </body>
 

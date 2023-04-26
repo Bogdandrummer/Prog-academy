@@ -3,6 +3,7 @@
 
 .wrapper {
 	display: flex;
+	flex-direction: column;
 	margin: auto;
 	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#041016+0,06181e+50,04151c+51,08222a+100 */
 	background: rgb(4, 16, 22); /* Old browsers */
@@ -31,13 +32,18 @@
 }
 .content {
 	width: 1440px;
+	padding: 0 165px;
 	margin: 0 auto;
-	border: 1px solid #000;
+	//border: 1px solid #fff;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.hidden {
+	display: none;
 }
 
 //Header
-.header {
-}
 .header__row {
 	display: flex;
 	flex-direction: column;
@@ -45,21 +51,27 @@
 	height: 1244px;
 	background: url("/img/bg_header.png") 50% / cover no-repeat;
 	z-index: 1;
-	padding: 0 165px;
 }
 
 //Адаптив Wrapper, Content и Header
 @media (max-width: 997px) {
 	.wrapper {
-		min-width: 700px;
+		min-width: 660px;
 	}
 	.content {
 		width: 100%;
+		padding: 0 30px;
 	}
 	.header__row {
 		padding: 0 20px;
+		height: 800px;
 		background-size: cover;
 		background-position: 50%;
+	}
+}
+@media (max-width: 667px) {
+	.content {
+		padding: 0 20px;
 	}
 }
 .header__top {
@@ -226,20 +238,75 @@
 	justify-content: space-evenly;
 	background-color: rgba(40, 40, 40, 0.3);
 }
+.address__contacts {
+	position: absolute;
+	right: 0;
+	top: 530px;
+}
+.address__phone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	width: 180px;
+	height: 40px;
+	color: #43ffd2;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	border-radius: 10px;
+}
+.address__call {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 16px;
+	width: 180px;
+	height: 40px;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #43ffd2;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	border-radius: 10px;
+}
+.cart__shopping {
+	display: flex;
+	position: absolute;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	font-size: 20px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	border-radius: 10px;
+	color: #43ffd2;
+	margin-top: 20px;
+}
 
 //Адаптив блока Адрес
 @media (max-width: 1315px) {
 	.header__address {
-		right: 50px;
+		top: 50px;
+		right: 120px;
 	}
 }
-@media (max-width: 1185px) {
-	.header__address {
-		display: none;
-	}
-}
+
 @media (max-width: 997px) {
 	.header__address {
+		display: none;
 		top: 150px;
 		z-index: 5;
 	}
@@ -250,14 +317,17 @@
 }
 
 //Текстовая часть Header
-.header__main {
-}
 .header__title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	position: absolute;
 	text-align: center;
 	z-index: 0;
 	left: 0;
 	right: 0;
+	margin: auto;
 	margin-top: 42px;
 	color: #ffffff;
 }
@@ -276,7 +346,7 @@
 //Адаптив big__title
 @media (max-width: 1315px) {
 	.big__title {
-		font-size: 120px;
+		font-size: 160px;
 	}
 	.big__title-bottom {
 		margin-top: -20px;
@@ -284,6 +354,9 @@
 }
 
 @media (max-width: 997px) {
+	.big__title {
+		font-size: 100px;
+	}
 	.header__title {
 		top: 35px;
 		left: 0;
@@ -293,15 +366,21 @@
 }
 @media (max-width: 710px) {
 	.big__title {
-		font-size: 90px;
+		font-size: 70px;
+	}
+	.big__title-bottom {
+		margin-top: -10px;
+		margin-bottom: 400px;
 	}
 	.little__title {
 		font-size: 16px;
 	}
 	.header__title {
+		width: 60%;
 		top: 20px;
 	}
 }
+
 .little__title {
 	font-family: "Oswald";
 	font-style: normal;
@@ -334,24 +413,717 @@
 	transform: rotate(-43.21deg);
 	z-index: -1;
 }
+//Адаптив фигур
+@media (max-width: 997px) {
+	.ellipse__blue__header {
+		width: 220px;
+		height: 180px;
+		left: 10%;
+		top: 350px;
+	}
+	.ellipse__pink__header {
+		width: 350px;
+		height: 200px;
+		right: 10%;
+		top: 300px;
+	}
+}
+@media (max-width: 667px) {
+	.ellipse__blue__header {
+		width: 148.66px;
+		height: 121.38px;
+		left: 5%;
+		top: 350px;
+		background: #249479;
+		filter: blur(25px);
+		transform: rotate(41.6deg);
+	}
+	.ellipse__pink__header {
+		width: 160.33px;
+		height: 93.54px;
+		right: 10%;
+		top: 250px;
+		background: #7d2253;
+		filter: blur(25px);
+		transform: rotate(-43.21deg);
+	}
+}
 
-//Фигуры в блюре для фона
-.ellipse_blue {
+//Кнопка Каталог
+.button__catalog {
+	display: flex;
+	width: 220px;
+	height: 50px;
+	background: #43ffd2;
+	margin: auto;
+	margin-top: 48px;
+	transition: 150ms all;
+	a {
+		margin: auto;
+		text-align: center;
+		text-decoration: none;
+		color: #000;
+		font-family: "Oswald";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 18px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		transition: 150ms all;
+	}
+	&:hover {
+		background: #7d2253;
+		transition: 150ms all;
+		a {
+			color: #fff;
+			transition: 150ms all;
+		}
+	}
+	&:active {
+		background: #7d2253;
+		box-shadow: inset 0px 0px 10px #1b000e;
+		transition: 150ms all;
+	}
+}
+
+.header__gradient {
 	position: absolute;
-	top: 50%;
-	left: 40%;
+	width: 100%;
+	height: 406px;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	background: linear-gradient(180deg, rgba(4, 10, 10, 0) 0%, #040a0a 100%);
+}
+@media (max-width: 667px) {
+	.header__gradient {
+		height: 400px;
+	}
+}
+
+//Блок Main
+
+//Main Каталог
+.main__catalog {
+	height: 900px;
+	background: linear-gradient(180deg, #040a0a 100%, rgba(4, 10, 10, 0) 0%);
+	z-index: 2;
+}
+.main__title {
+	position: relative;
+	margin-top: 100px;
+	z-index: 3;
+	& :last-child {
+		margin-top: 30px;
+	}
+}
+.title {
+	font-family: "Cormorant";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 100px;
+	line-height: 121px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.main__caption {
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 300;
+	width: 540px;
+	margin-left: 95px;
+	font-size: 20px;
+	word-wrap: normal;
+	line-height: 26px;
+	letter-spacing: 0.04em;
+	text-align: justify;
+	color: #ffffff;
+	z-index: 5;
+}
+//Каталог адаптив
+@media (max-width: 997px) {
+	.main__title {
+		margin-top: 70px;
+	}
+	.main__catalog {
+		height: 100%;
+	}
+	.title {
+		text-align: center;
+	}
+	.main__caption {
+		margin: auto;
+	}
+}
+@media (max-width: 667px) {
+	.main__title {
+		margin-top: 30px;
+	}
+	.main__caption {
+		display: none;
+	}
+	.main__catalog {
+		height: none;
+	}
+}
+
+//Каталог карточки
+.catalog__items {
+	position: relative;
+	z-index: 0;
+}
+.cat__item-title {
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+	margin: 0 0 0 50px;
+	line-height: 44px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #43ffd2;
+}
+.cat__item-text {
+	flex: 1 0 auto;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	margin-top: 10px;
+	line-height: 27px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #ffffff;
+	li {
+		list-style: disc;
+		margin-left: 20px;
+		margin-bottom: 4px;
+	}
+}
+.cat__item-link {
+	display: flex;
+	flex: 0 1 auto;
+	justify-content: end;
+	width: 100%;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	gap: 30px;
+	a {
+		text-decoration: none;
+		color: #d978ac;
+	}
+}
+.catalog__item-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: start;
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 90px;
+	width: 540px;
+	height: 310px;
+	padding: 30px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+}
+.catalog__item-2 {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	position: absolute;
+	top: -120px;
+	right: 0;
+	z-index: 2;
+	width: 445px;
+	height: 281px;
+	padding: 30px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+}
+.catalog__item-3 {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 540px;
+	height: 264px;
+	padding: 30px;
+	right: 0;
+	top: 186px;
+	z-index: 2;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+}
+
+//Карточки Каталога Адаптив
+@media (max-width: 997px) {
+	.catalog__items {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.catalog__item-1 {
+		position: static;
+		margin-top: 30px;
+	}
+	.catalog__item-2 {
+		position: static;
+		margin-top: 30px;
+		margin-left: 25%;
+	}
+	.catalog__item-3 {
+		position: static;
+		margin-top: 30px;
+	}
+	@media (max-width: 997px) {
+	}
+}
+@media (max-width: 667px) {
+	.catalog__item-1,
+	.catalog__item-2,
+	.catalog__item-3 {
+		width: 90%;
+		margin: 30px auto;
+	}
+	.cat__item-title {
+		margin: 0 auto;
+	}
+	.cat__item-text {
+		margin-left: 50px;
+	}
+}
+
+//Фоновые надписи Квіти, Букети, Додатково
+.main__flowers {
+	position: absolute;
+	width: 632px;
+	height: 296px;
+	left: -15%;
+	top: 0;
+	z-index: 0;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 200px;
+	line-height: 296px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #0a1717;
+}
+.main__buket {
+	position: absolute;
+	right: -18%;
+	top: -220px;
+	z-index: 0;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 200px;
+	line-height: 296px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #0a1717;
+}
+.main__add {
+	position: absolute;
+	right: -30%;
+	top: 300px;
+	z-index: 0;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 200px;
+	line-height: 200px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #0a1717;
+}
+//Адаптив фоновых надписей
+@media (max-width: 997px) {
+	.main__flowers {
+		top: 0;
+		left: -10%;
+		font-size: 160px;
+	}
+	.main__buket {
+		top: 35%;
+		right: -10%;
+		font-size: 160px;
+	}
+	.main__add {
+		top: 75%;
+		left: -15%;
+		font-size: 160px;
+	}
+}
+@media (max-width: 667px) {
+	.main__flowers {
+		display: none;
+	}
+	.main__buket {
+		display: none;
+	}
+	.main__add {
+		display: none;
+	}
+}
+
+//Светящиеся эллипсы в main
+.main__blue-ellipse {
+	position: absolute;
 	width: 879.44px;
 	height: 211.05px;
+	right: -40%;
+	top: 126px;
+	z-index: 0;
 	background: #43ffd2;
 	filter: blur(125px);
 	transform: rotate(32.83deg);
 }
-.ellipse_pink {
+.main__pink-ellipse {
 	position: absolute;
 	width: 707.54px;
 	height: 236.87px;
-	top: 50%;
-	left: 20%;
+	z-index: 0;
+	left: -20%;
+	top: 50px;
+	background: #7d2253;
+	filter: blur(125px);
+	transform: rotate(32.83deg);
+}
+//Адаптив эллипсов
+@media (max-width: 997px) {
+	.main__blue-ellipse {
+		top: 20%;
+	}
+	.main__pink-ellipse {
+		top: 50%;
+	}
+}
+
+//Блок Букеты
+.bukets__row {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: 1056px;
+	background: linear-gradient(180deg, #040a0a 100%, rgba(4, 10, 10, 0) 0%);
+}
+@media (max-width: 997px) {
+	.bukets__row {
+		height: 100%;
+	}
+}
+.bukets__bg {
+	position: absolute;
+	width: 974px;
+	height: 748px;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	background: url("/img/buket_bg.png") 0 0 / cover no-repeat;
+}
+.buket__title {
+	font-family: "Cormorant";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 100px;
+	line-height: 121px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.p1 {
+	position: absolute;
+	top: 0;
+	left: 165px;
+	z-index: 2;
+}
+.p2 {
+	position: absolute;
+	top: 120px;
+	left: 500px;
+	z-index: 2;
+}
+@media (max-width: 997px) {
+	.bukets__bg {
+		min-width: 100%;
+	}
+	.buket__title {
+		width: 100%;
+	}
+	.p1,
+	.p2 {
+		position: static;
+		text-align: center;
+	}
+}
+.buket__subtitle {
+	position: absolute;
+	top: 260px;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+	text-align: center;
+}
+
+//Слайдер
+.buket__slider {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	margin-top: 325px;
+	z-index: 4;
+}
+@media (max-width: 997px) {
+	.buket__slider {
+		margin-top: 250px;
+		width: 90%;
+	}
+}
+@media (max-width: 667px) {
+	.buket__slider {
+		width: 50%;
+	}
+}
+
+//Список слайдов
+.buket__slides {
+	overflow: hidden;
+	cursor: pointer;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 2;
+}
+.slider__line {
+	display: flex;
+	position: relative;
+	left: 0;
+	transition: all 500ms;
+}
+.buket__item {
+	margin-left: 30px;
+}
+.buket__item:first-child {
+	margin-left: 0;
+}
+.buket__item-row {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	z-index: 3;
+	min-width: calc(100% / 3);
+	box-sizing: content-box;
+}
+//Адаптив размера слайдов
+@media (max-width: 997px) {
+	.buket__item {
+		min-width: calc(100% / 2);
+		margin-left: 20px;
+	}
+}
+@media (max-width: 667px) {
+	.buket__item-row {
+		min-width: none;
+	}
+	.buket__item {
+		min-width: 100%;
+		margin: 0 10px;
+	}
+}
+.buket__img {
+	object-fit: cover;
+	height: 450px;
+}
+.new {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: #d978ac;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.02em;
+	color: #040a0a;
+}
+.sale {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	background: #31985a;
+	border-radius: 50%;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.02em;
+	color: #040a0a;
+}
+
+.buket__cart-title {
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #ffffff;
+	margin-top: 10px;
+}
+.buket__price {
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+//Кнопка Добавить в корзину
+.buy__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 220px;
+	height: 50px;
+	left: 165px;
+	top: 3139px;
+	border: 0.5px solid #ffffff;
+	background: none;
+	margin-top: 20px;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #ffffff;
+	transition: 150ms all;
+	&:hover {
+		border: none;
+		background: #43ffd2;
+		color: #040a09;
+		transition: 150ms all;
+	}
+	&:active {
+		border: none;
+		background: #43ffd2;
+		box-shadow: inset 0px 0px 10px #01281f;
+		transition: 150ms all;
+	}
+}
+//Стрелки переключения слайдов
+.prev__arrow {
+	position: absolute;
+	top: 225px;
+	left: -40px;
+	z-index: 2;
+	color: #43ffd2;
+	font-size: 24px;
+	transition: 100ms all;
+	&:hover {
+		color: #a1f8ea;
+		transition: 100ms all;
+		cursor: pointer;
+	}
+	&:active {
+		scale: (0.95);
+		color: #d978ac;
+		transition: 100ms all;
+	}
+}
+.next__arrow {
+	position: absolute;
+	top: 225px;
+	right: -40px;
+	z-index: 2;
+	color: #43ffd2;
+	font-size: 24px;
+	transition: 100ms all;
+	&:hover {
+		color: #a1f8ea;
+		transition: 100ms all;
+		cursor: pointer;
+	}
+	&:active {
+		scale: (0.95);
+		color: #d978ac;
+		transition: 100ms all;
+	}
+}
+.cat__all-link {
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: 0.1em;
+	text-decoration-line: underline;
+	text-transform: uppercase;
+	color: #d978ac;
+	margin-top: 60px;
+}
+@media (max-width: 997px) {
+	.cat__all-link {
+		display: block;
+		margin-top: 30px;
+	}
+}
+//Эллипсы
+.buket__blue-ellipse {
+	position: absolute;
+	width: 414px;
+	height: 661.89px;
+	top: 400px;
+	left: 10;
+	z-index: 0;
+	background: rgba(67, 255, 210, 0.47);
+	filter: blur(125px);
+	transform: rotate(32.83deg);
+}
+.buket__pink-ellipse {
+	position: absolute;
+	width: 371.28px;
+	height: 396.43px;
+	top: 600px;
+	left: 40%;
+	z-index: 0;
 	background: #7d2253;
 	filter: blur(125px);
 	transform: rotate(32.83deg);
