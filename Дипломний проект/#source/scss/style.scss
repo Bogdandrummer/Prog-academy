@@ -1,5 +1,5 @@
-@import "_null"; /*Обнуляющие стили*/
-@import "_fonts"; /*Шрифты*/
+@import "null";
+@import "fonts";
 
 .wrapper {
 	display: flex;
@@ -34,7 +34,6 @@
 	width: 1440px;
 	padding: 0 165px;
 	margin: 0 auto;
-	//border: 1px solid #fff;
 	overflow: hidden;
 	box-sizing: border-box;
 }
