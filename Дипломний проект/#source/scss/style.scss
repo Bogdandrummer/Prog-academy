@@ -1267,6 +1267,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 700px;
+	z-index: 3;
 }
 .special__title {
 	display: flex;
@@ -1277,6 +1278,7 @@
 		align-items: center;
 	}
 }
+
 .pink__line {
 	display: inline-block;
 	width: 255px;
@@ -1300,11 +1302,26 @@
 	text-transform: uppercase;
 	color: #ffffff;
 }
+@media (max-width: 890px) {
+	.special__title {
+		width: 100%;
+		justify-content: center;
+	}
+	.special__text {
+		width: 100%;
+	}
+	.special__block {
+		width: 90%;
+		margin: auto;
+		margin-top: 30px;
+	}
+}
 .special__list {
 	display: flex;
 	flex-direction: column;
 	flex: 0 1 auto;
 	position: relative;
+	z-index: 3;
 	margin-top: 40px;
 	font-family: "Oswald";
 	font-style: normal;
@@ -1323,14 +1340,30 @@
 		width: 20px;
 		height: 60px;
 		position: absolute;
-		left: -15px;
+		left: -20px;
 		bottom: -60px;
+	}
+	@media (max-width: 890px) {
+		:last-child::before {
+			content: none;
+		}
+		::after {
+			content: url("/img/Arrow9.png");
+			width: 20px;
+			height: 60px;
+			position: absolute;
+			left: 380px;
+			bottom: -60px;
+		}
 	}
 }
 .spc__list-item {
 	list-style: circle;
 	margin-top: 20px;
 	max-width: 255px;
+	@media (max-width: 890px) {
+		max-width: 350px;
+	}
 }
 .special__buket {
 	width: 255px;
@@ -1375,18 +1408,26 @@
 @media (max-width: 997px) {
 	.special__icons {
 		grid-template-rows: repeat(3, auto);
-		grid-template-column: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		:first-child {
-			grid-column: 1/5;
+			grid-row: 1fr;
+			grid-column: 1/3;
 			justify-content: end;
-			border: 1px solid red;
 		}
 		:nth-child(2) {
-			grid-column: 1/4;
+			grid-row: 1fr;
+			grid-column: auto auto;
+			justify-items: start;
 		}
 		:nth-child(3) {
-			grid-column: 1/5;
+			grid-row: 1fr;
+			grid-column: auto;
 		}
+	}
+}
+@media (max-width: 890px) {
+	.special__icons {
+		display: none;
 	}
 }
 
@@ -1398,8 +1439,9 @@
 	position: absolute;
 	width: 354.93px;
 	height: 364.22px;
-	left: 1334.45px;
-	top: 4404px;
+	bottom: 0;
+	right: -10px;
+	z-index: 0;
 	background: #7d2253;
 	filter: blur(125px);
 	transform: rotate(32.83deg);
