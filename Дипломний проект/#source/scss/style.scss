@@ -48,7 +48,7 @@
 	flex-direction: column;
 	position: relative;
 	height: 1244px;
-	background: url("/img/bg_header.png") 50% / cover no-repeat;
+	background: url("../img/bg_header.png") 50% / cover no-repeat;
 	z-index: 1;
 }
 
@@ -831,7 +831,7 @@
 	top: 0;
 	right: 0;
 	z-index: 1;
-	background: url("/img/buket_bg.png") 0 0 / cover no-repeat;
+	background: url("../img/buket_bg.png") 0 0 / cover no-repeat;
 }
 .buket__title {
 	font-family: "Cormorant";
@@ -1348,7 +1348,7 @@
 		margin-top: 0;
 	}
 	:last-child::before {
-		content: url("/img/Arrow8.png");
+		content: url("../img/Arrow8.png");
 		width: 20px;
 		height: 60px;
 		position: absolute;
@@ -1360,7 +1360,7 @@
 			content: none;
 		}
 		::after {
-			content: url("/img/Arrow9.png");
+			content: url("../img/Arrow9.png");
 			width: 20px;
 			height: 60px;
 			position: absolute;

@@ -322,7 +322,7 @@ h6 {
   flex-direction: column;
   position: relative;
   height: 1244px;
-  background: url("/img/bg_header.png") 50%/cover no-repeat;
+  background: url("../img/bg_header.png") 50%/cover no-repeat;
   z-index: 1;
 }
 
@@ -1106,7 +1106,7 @@ h6 {
   top: 0;
   right: 0;
   z-index: 1;
-  background: url("/img/buket_bg.png") 0 0/cover no-repeat;
+  background: url("../img/buket_bg.png") 0 0/cover no-repeat;
 }
 
 .buket__title {
@@ -1645,7 +1645,7 @@ h6 {
   margin-top: 0;
 }
 .special__list :last-child::before {
-  content: url("/img/Arrow8.png");
+  content: url("../img/Arrow8.png");
   width: 20px;
   height: 60px;
   position: absolute;
@@ -1657,7 +1657,7 @@ h6 {
     content: none;
   }
   .special__list ::after {
-    content: url("/img/Arrow9.png");
+    content: url("../img/Arrow9.png");
     width: 20px;
     height: 60px;
     position: absolute;
