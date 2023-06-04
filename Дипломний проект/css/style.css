@@ -326,7 +326,7 @@ h6 {
   z-index: 1;
 }
 
-@media (max-width: 997px) {
+@media screen and (max-width: 997px) {
   .wrapper {
     min-width: 660px;
   }
@@ -341,7 +341,11 @@ h6 {
     background-position: 50%;
   }
 }
-@media (max-width: 667px) {
+@media screen and (max-width: 667px) {
+  .wrapper {
+    min-width: none;
+    width: 100vh;
+  }
   .content {
     padding: 0 20px;
   }
