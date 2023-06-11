@@ -297,6 +297,7 @@ h6 {
   display: flex;
   flex-direction: column;
   margin: auto;
+  box-sizing: border-box;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#041016+0,06181e+50,04151c+51,08222a+100 */
   background: rgb(4, 16, 22); /* Old browsers */
   background: -moz-linear-gradient(left, rgb(4, 16, 22) 0%, rgb(6, 24, 30) 50%, rgb(4, 21, 28) 51%, rgb(8, 34, 42) 100%); /* FF3.6-15 */
@@ -327,11 +328,8 @@ h6 {
 }
 
 @media screen and (max-width: 997px) {
-  .wrapper {
-    min-width: 660px;
-  }
   .content {
-    width: 100%;
+    width: 100vw;
     padding: 0 30px;
   }
   .header__row {
@@ -343,11 +341,11 @@ h6 {
 }
 @media screen and (max-width: 667px) {
   .wrapper {
-    min-width: none;
-    width: 100vh;
+    min-width: 300px;
+    width: 100%;
   }
   .content {
-    padding: 0 20px;
+    padding: 0 0px;
   }
 }
 .header__top {
@@ -384,7 +382,7 @@ h6 {
 .menu__btn {
   display: none;
   font-size: 40px;
-  margin: 70px 20px 20px 10px;
+  margin: 30px 20px 20px 20px;
 }
 
 #burger {
@@ -395,6 +393,7 @@ h6 {
 }
 
 .menu__item {
+  box-sizing: border-box;
   position: relative;
   transition: 150ms all;
 }
@@ -437,7 +436,7 @@ h6 {
   margin-top: 5px;
 }
 
-@media (max-width: 997px) {
+@media screen and (max-width: 997px) {
   .menu {
     max-width: 100%;
   }
@@ -469,6 +468,22 @@ h6 {
     border: 1px solid #43ffd2;
     backdrop-filter: none;
     background-color: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu__list {
+    margin-top: 10px;
+  }
+  .menu__list li {
+    font-size: 1rem;
+  }
+  .menu__btn {
+    margin: 10px 0 0 10px;
+    font-size: 30px;
+  }
+  .sub__menu {
+    width: 200px;
+    left: 150px;
   }
 }
 .header__address {
@@ -585,18 +600,38 @@ h6 {
 @media (max-width: 1315px) {
   .header__address {
     top: 50px;
-    right: 120px;
+    right: 50px;
   }
 }
 @media (max-width: 997px) {
   .header__address {
     display: none;
-    top: 150px;
+    top: 120px;
     z-index: 5;
   }
   .address__icons {
     background-color: rgba(40, 40, 40, 0);
     top: 150px;
+  }
+}
+@media screen and (max-width: 667px) {
+  .header__address {
+    top: auto;
+    right: 30px;
+    left: 30px;
+    bottom: 20px;
+    margin-left: 0;
+    margin-top: 0;
+    margin: auto;
+    text-align: left;
+  }
+  .address__contacts {
+    top: auto;
+    right: 0;
+    bottom: 10px;
+  }
+  .address__icons {
+    display: none;
   }
 }
 .header__title {
@@ -649,6 +684,7 @@ h6 {
 @media (max-width: 710px) {
   .big__title {
     font-size: 70px;
+    margin-top: 20px;
   }
   .big__title-bottom {
     margin-top: -10px;
@@ -812,6 +848,7 @@ h6 {
   font-style: normal;
   font-weight: 300;
   width: 540px;
+  margin-top: 15px;
   margin-left: 95px;
   font-size: 20px;
   word-wrap: normal;
