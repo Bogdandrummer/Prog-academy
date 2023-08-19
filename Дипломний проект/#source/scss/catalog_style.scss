@@ -242,10 +242,9 @@
 
 .header__category {
 	display: grid;
-	grid-template-rows: repeat(3, 1fr);
-	grid-teplate-columns: repeat(5, auto);
+	grid-template-columns: repeat(7, auto);
+	grid-template-rows: repeat(3, 40px);
 	li {
-		display: flex;
 		align-items: center;
 		justify-content: center;
 		color: #fff;
@@ -258,7 +257,7 @@
 		text-transform: uppercase;
 		border-radius: 40px;
 		border: 0.5px solid #fff;
-		height: 40px;
+		padding: 11px 16px;
 	}
 }
 
