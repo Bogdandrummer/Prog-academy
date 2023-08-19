@@ -51,10 +51,24 @@ const buketItem = document.querySelectorAll('.buket__item');
 const prevBtn = document.querySelector('.prev__arrow');
 const nextBtn = document.querySelector('.next__arrow');
 let offset = 0;
+let gap;
+let bodyWidth = document.documentElement.clientWidth;
+
+//Проверка шинины документа и присвоение свойства gap для слайдера
+if (bodyWidth > 997) {
+	gap = 30;
+}
+if (bodyWidth < 998) {
+	gap = 20;
+} else
+	if (bodyWidth < 668) {
+		gap = 18;
+	}
+
 
 //Кнопка Next
 nextBtn.addEventListener('click', function () {
-	let wdt = document.querySelector('.buket__item').getBoundingClientRect().width + 30;
+	let wdt = document.querySelector('.buket__item').getBoundingClientRect().width + gap;
 	/*let mWdt = document.querySelector('.content').getBoundingClientRect().width;*/ 	/*Ширина контента*/
 	let rest = wdt * 2;
 	//Длина ленты слайдов
@@ -71,7 +85,7 @@ nextBtn.addEventListener('click', function () {
 });
 //Кнопка Prev
 prevBtn.addEventListener('click', function () {
-	let wdt = document.querySelector('.buket__item').getBoundingClientRect().width + 30;
+	let wdt = document.querySelector('.buket__item').getBoundingClientRect().width + gap;
 	/*let mWdt = document.querySelector('.content').getBoundingClientRect().width;*/ 	/*Ширина контента*/
 	let rest = wdt * 2;
 	//Длина ленты слайдов
@@ -79,12 +93,11 @@ prevBtn.addEventListener('click', function () {
 	let lgtSlide = sln.length * wdt;
 	let diff = lgtSlide - offset;
 	offset -= wdt;
-	console.log(offset + 'offset');
-	console.log(diff + 'diff');
 	if (offset <= 0) {
 		offset = lgtSlide - wdt * 3;
 	}
 	sliderLine.style.left = -offset + 'px';
 });
+
 
 
