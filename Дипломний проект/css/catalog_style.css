@@ -505,9 +505,11 @@ h6 {
 }
 
 .header__board {
-  display: block;
-  position: relative;
+  display: flex;
+  flex-direction: column;
   max-width: 920px;
+  margin-right: 10px;
+  position: relative;
   z-index: 1;
   margin: 155px 0 0 0;
   padding: 15px 20px;
@@ -538,17 +540,17 @@ h6 {
   line-height: normal;
   letter-spacing: 0.56px;
   text-transform: uppercase;
-  max-width: 95%;
+  width: 100%;
 }
 
 .header__category {
-  display: grid;
-  grid-template-columns: repeat(7, auto);
-  grid-template-rows: repeat(3, 40px);
+  display: flex;
+  flex-wrap: wrap;
 }
 .header__category li {
-  align-items: center;
-  justify-content: center;
+  margin: 10px 10px 0px 0px;
+  display: flex;
+  flex: 0 1 auto;
   color: #fff;
   font-family: Oswald;
   font-size: 12px;
@@ -560,6 +562,10 @@ h6 {
   border-radius: 40px;
   border: 0.5px solid #fff;
   padding: 11px 16px;
+  max-height: 40px;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 997px) {
