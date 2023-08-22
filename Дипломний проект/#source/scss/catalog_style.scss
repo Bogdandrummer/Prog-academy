@@ -100,7 +100,6 @@
 	}
 	.header__row {
 		padding: 0 20px;
-		height: 800px;
 		background-size: cover;
 		background-position: 50%;
 	}
@@ -206,6 +205,15 @@
 	letter-spacing: 2px;
 	text-transform: uppercase;
 }
+
+@media (max-width: 710px) {
+	.big__title {
+		font-size: 70px;
+		margin-top: 20px;
+	}
+}
+
+//Доска с категориями в Header
 .header__board {
 	display: flex;
 	flex-direction: column;
@@ -219,16 +227,31 @@
 	background: rgba(0, 0, 0, 0.3);
 	backdrop-filter: blur(10px);
 }
+@media (max-width: 1440px) {
+	.header__board {
+		width: 80%;
+		background: none;
+		backdrop-filter: none;
+	}
+}
 .header__title {
 	display: flex;
 	flex-direction: column;
+	@media (max-width: 997px) {
+		justify-content: center;
+	}
 	span {
-		max-width: 50%;
+		//	max-width: 50%;
 	}
 }
 .header__title > span:last-child {
 	width: 100%;
 	margin-left: 25%;
+	@media (max-width: 1315px) {
+		margin-left: 20%;
+	}
+	@media (max-width: 997px) {
+	}
 }
 .header__subtitle {
 	color: #fff;
@@ -240,12 +263,13 @@
 	letter-spacing: 0.56px;
 	text-transform: uppercase;
 	width: 100%;
+	margin-top: 20px;
 }
 
 .header__category {
 	display: flex;
 	flex-wrap: wrap;
-
+	margin-top: 60px;
 	li {
 		margin: 10px 10px 0px 0px;
 		display: flex;
