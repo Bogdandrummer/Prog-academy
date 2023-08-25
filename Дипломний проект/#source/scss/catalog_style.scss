@@ -25,8 +25,8 @@
 .header__row {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 	position: relative;
-	height: 1244px;
 	z-index: 1;
 }
 
@@ -544,4 +544,48 @@
 	.address__text {
 		font-size: 9px;
 	}
+}
+
+//MAIN
+
+.main {
+}
+.main__row {
+	display: flex;
+	position: relative;
+	z-index: 1;
+	flex-direction: column;
+}
+.sort__list {
+	display: flex;
+	position: relative;
+	align-self: flex-end;
+	width: 255px;
+	height: 40px;
+	padding: 11px 20px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	color: #fff;
+	font-family: Oswald;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	letter-spacing: 0.48px;
+	text-transform: uppercase;
+}
+.sort {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+#main__sort {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.filter {
 }
