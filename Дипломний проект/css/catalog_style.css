@@ -393,12 +393,12 @@ h6 {
     padding: 0 30px;
   }
   .header__row {
-    padding: 0 20px;
+    padding: 0 30px;
     background-size: cover;
     background-position: 50%;
   }
 }
-@media screen and (max-width: 667px) {
+@media (max-width: 667px) {
   .wrapper {
     min-width: 300px;
     width: 100%;
@@ -517,7 +517,7 @@ h6 {
   position: relative;
   z-index: 1;
   margin: 155px 0 0 0;
-  padding: 15px 20px;
+  padding: 15px 0px;
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
@@ -526,28 +526,62 @@ h6 {
 @media (max-width: 1440px) {
   .header__board {
     width: 80%;
-    background: none;
-    backdrop-filter: none;
+  }
+}
+@media (max-width: 1315px) {
+  .header__board {
+    padding-right: 50px;
+  }
+}
+@media (max-width: 997px) {
+  .header__board {
+    width: 100%;
+  }
+}
+@media (max-width: 710px) {
+  .header__board {
+    /*background: none;
+    backdrop-filter: none;*/
+    margin-left: none;
+    margin-top: 50px;
+    padding: 0;
   }
 }
 .header__title {
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
 }
 @media (max-width: 997px) {
   .header__title {
     justify-content: center;
   }
 }
+@media (max-width: 710px) {
+  .header__title {
+    padding-left: 0px;
+    align-items: center;
+  }
+}
+
 .header__title > span:last-child {
   width: 100%;
   margin-left: 25%;
 }
 @media (max-width: 1315px) {
   .header__title > span:last-child {
-    margin-left: 20%;
+    margin-left: 15%;
   }
 }
+@media (max-width: 710px) {
+  .header__title > span:last-child {
+    width: none;
+    margin-left: 0%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
 .header__subtitle {
   color: #fff;
   font-family: Oswald;
@@ -564,6 +598,8 @@ h6 {
 .header__category {
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
   margin-top: 60px;
 }
 .header__category li {
@@ -585,6 +621,11 @@ h6 {
   white-space: nowrap;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 710px) {
+  .header__category {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 997px) {
