@@ -10,7 +10,9 @@
 	background: #040a0a;
 }
 .content {
+	display: flex;
 	max-width: 1440px;
+	height: auto;
 	padding: 0 165px;
 	margin: 0 auto;
 	overflow: hidden;
@@ -25,9 +27,9 @@
 .header__row {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	position: relative;
 	z-index: 1;
+	padding-bottom: 50px;
 }
 
 .header__img1 {
@@ -213,6 +215,20 @@
 	}
 }
 
+.site__location {
+	position: relative;
+	z-index: 1;
+	margin-top: 40px;
+	color: #fff;
+	font-family: Oswald;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.48px;
+	text-transform: uppercase;
+}
+
 //Доска с категориями в Header
 .header__board {
 	display: flex;
@@ -272,7 +288,6 @@
 	@media (max-width: 997px) {
 	}
 	@media (max-width: 710px) {
-		width: none;
 		margin-left: 0%;
 		margin-bottom: 20px;
 		text-align: center;
@@ -546,19 +561,43 @@
 	}
 }
 
-//MAIN
-
-.main {
+.sort__list {
+	display: flex;
+	width: 100%;
+	margin-top: 30px;
 }
-.main__row {
+.sort {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	color: #fff;
+	padding: 11px 20px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+	line-height: 24px;
+	li {
+		transition: 150ms all;
+		&:hover {
+			color: #43ffd2;
+			transition: 150ms all;
+		}
+	}
+}
+.sort__row {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+.main__sort {
 	display: flex;
 	position: relative;
 	z-index: 1;
-	flex-direction: column;
-}
-.sort__list {
-	display: flex;
-	position: relative;
+	justify-content: space-between;
 	align-self: flex-end;
 	width: 255px;
 	height: 40px;
@@ -574,18 +613,12 @@
 	line-height: normal;
 	letter-spacing: 0.48px;
 	text-transform: uppercase;
-}
-.sort {
-	display: none;
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	left: 0;
-}
-#main__sort {
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
+	transition: 150ms all;
+	margin-bottom: 100px;
+	&:hover {
+		color: #43ffd2;
+		transition: 150ms all;
+	}
 }
 .filter {
 }

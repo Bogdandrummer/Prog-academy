@@ -302,7 +302,9 @@ h6 {
 }
 
 .content {
+  display: flex;
   max-width: 1440px;
+  height: auto;
   padding: 0 165px;
   margin: 0 auto;
   overflow: hidden;
@@ -316,9 +318,9 @@ h6 {
 .header__row {
   display: flex;
   flex-direction: column;
-  height: 100%;
   position: relative;
   z-index: 1;
+  padding-bottom: 50px;
 }
 
 .header__img1 {
@@ -509,6 +511,20 @@ h6 {
     margin-top: 20px;
   }
 }
+.site__location {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+  color: #fff;
+  font-family: Oswald;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+
 .header__board {
   display: flex;
   flex-direction: column;
@@ -575,7 +591,6 @@ h6 {
 }
 @media (max-width: 710px) {
   .header__title > span:last-child {
-    width: none;
     margin-left: 0%;
     margin-bottom: 20px;
     text-align: center;
@@ -852,16 +867,46 @@ h6 {
     font-size: 9px;
   }
 }
-.main__row {
+.sort__list {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.sort {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  color: #fff;
+  padding: 11px 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  line-height: 24px;
+}
+.sort li {
+  transition: 150ms all;
+}
+.sort li:hover {
+  color: #43ffd2;
+  transition: 150ms all;
+}
+
+.sort__row {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.main__sort {
   display: flex;
   position: relative;
   z-index: 1;
-  flex-direction: column;
-}
-
-.sort__list {
-  display: flex;
-  position: relative;
+  justify-content: space-between;
   align-self: flex-end;
   width: 255px;
   height: 40px;
@@ -877,18 +922,10 @@ h6 {
   line-height: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
+  transition: 150ms all;
+  margin-bottom: 100px;
 }
-
-.sort {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-}
-
-#main__sort {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+.main__sort:hover {
+  color: #43ffd2;
+  transition: 150ms all;
 }

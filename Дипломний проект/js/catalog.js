@@ -44,3 +44,23 @@ subMenu.addEventListener('mouseleave', function () {
 		subMenu.style.display = "";
 	}
 });
+
+
+//Кнопка сортировки товаров
+
+const mainSort = document.querySelector('.main__sort');
+const sort = document.querySelector('.sort');
+mainSort.addEventListener('click', function (e) {
+	e.stopPropagation();
+	if (sort.style.display === 'none' || sort.style.display === '') {
+		sort.style.display = 'flex';
+		e.stopPropagation();
+	} else if (sort.style.display === 'flex') {
+		sort.style.display = 'none';
+		e.stopPropagation();
+	}
+});
+
+
+
+
