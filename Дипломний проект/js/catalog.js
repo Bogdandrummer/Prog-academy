@@ -50,6 +50,8 @@ subMenu.addEventListener('mouseleave', function () {
 
 const mainSort = document.querySelector('.main__sort');
 const sort = document.querySelector('.sort');
+
+//Событие выпадает-исчезает список 
 mainSort.addEventListener('click', function (e) {
 	e.stopPropagation();
 	if (sort.style.display === 'none' || sort.style.display === '') {
@@ -61,6 +63,18 @@ mainSort.addEventListener('click', function (e) {
 	}
 });
 
+// Событие клик на пункте списка
+const sortElem = document.querySelectorAll('.sort__item');
+let sortText;
+console.log(mainSort.children);
+for (let i = 0; i < sortElem.length; i++) {
+	sortElem[i].addEventListener('click', function () {
+		sortText = sortElem[i].innerHTML;
+
+		mainSort.innerText = sortText + sortElem[i].firstElementChild.innerHTML;
+
+	});
+}
 
 
 
