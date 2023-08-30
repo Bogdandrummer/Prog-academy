@@ -74,23 +74,23 @@
 
 							<!--Список категорий-->
 							<ul class="header__category">
-								<li>букети з гіпсофіл</li>
-								<li>букети з ромашек</li>
-								<li>букети з хризантем</li>
-								<li>кімнатні горщикові квіти</li>
-								<li>монобукети</li>
-								<li>збірні букети</li>
-								<li>святковий букет</li>
-								<li>композиції з квітів</li>
-								<li>конверти</li>
-								<li>листівки</li>
-								<li>подарунки</li>
-								<li>букети з сухоцвіту</li>
-								<li>кульки</li>
-								<li>популярне</li>
-								<li>букети троянд</li>
-								<li>квіти на похорони</li>
-								<li>упакування подарунків</li>
+								<li class="board__li">букети з гіпсофіл</li>
+								<li class="board__li">букети з ромашек</li>
+								<li class="board__li">букети з хризантем</li>
+								<li class="board__li">кімнатні горщикові квіти</li>
+								<li class="board__li">монобукети</li>
+								<li class="board__li">збірні букети</li>
+								<li class="board__li">святковий букет</li>
+								<li class="board__li">композиції з квітів</li>
+								<li class="board__li">конверти</li>
+								<li class="board__li">листівки</li>
+								<li class="board__li">подарунки</li>
+								<li class="board__li">букети з сухоцвіту</li>
+								<li class="board__li">кульки</li>
+								<li class="board__li">популярне</li>
+								<li class="board__li">букети троянд</li>
+								<li class="board__li">квіти на похорони</li>
+								<li class="board__li">упакування подарунків</li>
 							</ul>
 						</div>
 					</div>
@@ -124,8 +124,11 @@
 
 				<!--Сортировка товаров-->
 				<div class="sort__list">
+					<!--Первая строка, кнопка сортировки-->
 					<div class="sort__row">
-						<div class="main__sort">Популярне <span>▾</span>
+						<div class="main__sort">
+							<span>Популярне</span>
+							<span>▾</span>
 							<ul class="sort">
 								<li class="sort__item">Популярне</li>
 								<li class="sort__item">Новинки</li>
@@ -134,8 +137,80 @@
 							</ul>
 						</div>
 					</div>
+					<!--Панель Фильтр товаров-->
+					<section class="filter__goods">
+						<!--За світлом-->
+						<div class="light__block">
+							<h4 class="filter__title">За світлом</h4>
+							<!--Пункти-->
+							<input type="radio" />
+							<label for="choise1">Ніжні</label>
+							<input type="radio" />
+							<label for="choise2">Яскраві</label>
+						</div>
+						<!--За кольором-->
+						<div class="color__block">
+							<h4 class="filter__title">За кольором</h4>
+							<!--Пункти-->
+							<input type="radio" />
+							<label for="choise1">Білий</label>
+							<input type="radio" />
+							<label for="choise2">Жовтий</label>
+							<input type="radio" />
+							<label for="choise3">Червоний</label>
+							<input type="radio" />
+							<label for="choise4">Зелений</label>
+							<input type="radio" />
+							<label for="choise5">Помаранчовий</label>
+							<input type="radio" />
+							<label for="choise6">Рожевий</label>
+							<input type="radio" />
+							<label for="choise7">Синій</label>
+						</div>
+						<!--За форматом-->
+						<div class="format__block">
+							<h4 class="filter__title">За форматом</h4>
+							<input type="radio" />
+							<label for="choise1">Букет</label>
+							<input type="radio" />
+							<label for="choise2">У вазі</label>
+							<input type="radio" />
+							<label for="choise3">У конверті</label>
+							<input type="radio" />
+							<label for="choise4">У корзині</label>
+							<input type="radio" />
+							<label for="choise5">У капелюшній коробці</label>
+							<input type="radio" />
+							<label for="choise6">У ящику</label>
+						</div>
+						<!--Вартість-->
+						<div class="filter__price">
+							<h4 class="filter__title">Вартість</h4>
+							<div class="price__line">
+								<span>&bull;</span>
+								<span>&bull;</span>
+							</div>
+							<div class="price__field"></div>
+						</div>
+						<!--За квіткою-->
+						<div class="filter__flower">
+							<h4 class="filter__title">За квіткою</h4>
+							<input type="radio" />
+							<label for="choise1">Альстремерія</label>
+							<input type="radio" />
+							<label for="choise2">Антуріум</label>
+							<input type="radio" />
+							<label for="choise3">Холодок лікарський</label>
+							<input type="radio" />
+							<label for="choise4">Астильба</label>
+							<input type="radio" />
+							<label for="choise5">Астранція</label>
+						</div>
 
 
+
+
+					</section>
 
 
 					<!--Фильтр товаров-->

@@ -62,17 +62,26 @@ mainSort.addEventListener('click', function (e) {
 		e.stopPropagation();
 	}
 });
-
 // Событие клик на пункте списка
 const sortElem = document.querySelectorAll('.sort__item');
 let sortText;
-console.log(mainSort.children);
 for (let i = 0; i < sortElem.length; i++) {
 	sortElem[i].addEventListener('click', function () {
 		sortText = sortElem[i].innerHTML;
+		mainSort.firstElementChild.innerText = sortText;
+	});
+}
+//Событие, когда курсор покидает пределы меню сортировки
+mainSort.addEventListener('mouseleave', function () {
+	sort.style.display = 'none';
+});
 
-		mainSort.innerText = sortText + sortElem[i].firstElementChild.innerHTML;
+//Смена цвета при клике на header__category
 
+const boardLi = document.querySelectorAll('.board__li');
+for (let i = 0; i < boardLi.length; i++) {
+	boardLi[i].addEventListener('click', function () {
+		boardLi[i].classList.toggle('li__chosen');
 	});
 }
 

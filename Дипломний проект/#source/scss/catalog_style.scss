@@ -243,6 +243,7 @@
 	background: rgba(0, 0, 0, 0.3);
 	backdrop-filter: blur(10px);
 }
+
 @media (max-width: 1440px) {
 	.header__board {
 		width: 80%;
@@ -312,29 +313,35 @@
 	margin: auto;
 	justify-content: center;
 	margin-top: 60px;
-	li {
-		margin: 10px 10px 0px 0px;
-		display: flex;
-		flex: 0 1 auto;
-		color: #fff;
-		font-family: Oswald;
-		font-size: 12px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		letter-spacing: 0.48px;
-		text-transform: uppercase;
-		border-radius: 40px;
-		border: 0.5px solid #fff;
-		padding: 11px 16px;
-		max-height: 40px;
-		white-space: nowrap;
-		align-items: center;
-		justify-content: center;
-	}
 	@media (max-width: 710px) {
 		display: none;
 	}
+}
+.board__li {
+	margin: 10px 10px 0px 0px;
+	display: flex;
+	flex: 0 1 auto;
+	color: #fff;
+	font-family: Oswald;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0.48px;
+	text-transform: uppercase;
+	border-radius: 40px;
+	border: 0.5px solid #fff;
+	padding: 11px 16px;
+	max-height: 40px;
+	white-space: nowrap;
+	align-items: center;
+	justify-content: center;
+	transition: all 150ms;
+}
+.li__chosen {
+	color: #43ffd2;
+	border-color: #43ffd2;
+	transition: all 150ms;
 }
 
 //Адаптив меню
@@ -592,6 +599,9 @@
 	display: flex;
 	justify-content: flex-end;
 	width: 100%;
+	@media (max-width: 710px) {
+		justify-content: flex-start;
+	}
 }
 .main__sort {
 	display: flex;

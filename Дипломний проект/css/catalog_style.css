@@ -617,7 +617,13 @@ h6 {
   justify-content: center;
   margin-top: 60px;
 }
-.header__category li {
+@media (max-width: 710px) {
+  .header__category {
+    display: none;
+  }
+}
+
+.board__li {
   margin: 10px 10px 0px 0px;
   display: flex;
   flex: 0 1 auto;
@@ -636,11 +642,13 @@ h6 {
   white-space: nowrap;
   align-items: center;
   justify-content: center;
+  transition: all 150ms;
 }
-@media (max-width: 710px) {
-  .header__category {
-    display: none;
-  }
+
+.li__chosen {
+  color: #43ffd2;
+  border-color: #43ffd2;
+  transition: all 150ms;
 }
 
 @media screen and (max-width: 997px) {
@@ -900,6 +908,11 @@ h6 {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+}
+@media (max-width: 710px) {
+  .sort__row {
+    justify-content: flex-start;
+  }
 }
 
 .main__sort {
