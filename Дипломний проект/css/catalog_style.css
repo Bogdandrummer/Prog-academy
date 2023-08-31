@@ -524,6 +524,15 @@ h6 {
   letter-spacing: 0.48px;
   text-transform: uppercase;
 }
+.site__location a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 150ms;
+}
+.site__location a:hover {
+  color: #43ffd2;
+  transition: all 150ms;
+}
 
 .header__board {
   display: flex;
@@ -877,6 +886,7 @@ h6 {
 }
 .sort__list {
   display: flex;
+  flex-direction: column;
   width: 100%;
   margin-top: 30px;
 }
@@ -941,4 +951,111 @@ h6 {
 .main__sort:hover {
   color: #43ffd2;
   transition: 150ms all;
+}
+
+.filter__goods {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  width: 255px;
+  border-radius: 20px;
+  padding: 0 16px 30px 16px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+.filter__goods label {
+  margin-top: 5px;
+  color: #fff;
+  font-family: Oswald;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.filter__goods label input {
+  margin-right: 6px;
+}
+.filter__goods label input:checked {
+  background-color: #43ffd2;
+}
+
+.light__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__title {
+  color: #43ffd2;
+  font-family: Oswald;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.color__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.format__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__price {
+  display: flex;
+  flex-direction: column;
+}
+
+.price__line {
+  width: 100%;
+  position: relative;
+  height: auto;
+  border: 0.2px solid #fff;
+  margin-top: 13px;
+}
+
+#dot1 {
+  position: absolute;
+  left: -2.5px;
+  top: -2.5px;
+  z-index: 1;
+  background-color: #43ffd2;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+#dot2 {
+  position: absolute;
+  right: -2.5px;
+  top: -2.5px;
+  z-index: 1;
+  background-color: #43ffd2;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.price__field {
+  color: #fff;
+  font-family: Oswald;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.filter__flower {
+  display: flex;
+  flex-direction: column;
 }
