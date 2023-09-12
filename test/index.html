@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles.css">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Price Range slider</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<h2>Price Range</h2>
+			<p>Введите минимальную и максимальную цену</p>
+		</header>
+		<div class="price-input">
+			<!--Field min-->
+			<div class="field">
+				<span>Min</span>
+				<input type="number" name="mn" class="input-min" value="50">
+			</div>
+			<div class="separator">-</div>
+			<!--Field Max-->
+			<div class="field">
+				<span>Max</span>
+				<input type="number" name="mx" class="input-max" value="1250">
+			</div>
+		</div>
+		<!--Slider-->
+		<div class="slider">
+			<div class="progress"></div>
+		</div>
+		<!--Range-input-->
+		<div class="range-input">
+			<input type="range" class="range-min" min="0" max="1300" value="50">
+			<input type="range" class="range-max" min="0" max="1300" value="1250">
+		</div>
+	</div>
+
+	<script src="index.js"></script>
+</body>
+
+</html>

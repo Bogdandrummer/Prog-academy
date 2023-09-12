@@ -31,7 +31,7 @@
 					<nav class="menu">
 						<div class="menu__btn"><i id="burger" class="fa-solid fa-bars"></i></div>
 						<ul class="menu__list">
-							<li><a href="index.html"><img src="/img/logos/menu_logo.png" alt=""></a></li>
+							<li><a href="../index.html"><img src="/img/logos/menu_logo.png" alt=""></a></li>
 							<li class="menu__item" id="catalog">Каталог
 								<!--Sub menu-->
 								<ul class="sub__menu">
@@ -190,7 +190,7 @@
 								У ящику</label>
 						</div>
 						<!--Вартість-->
-						<div class="filter__price">
+						<!--  <div class="filter__price">
 							<h4 class="filter__title">Вартість</h4>
 							<div class="price__line">
 								<span id="dot1"></span>
@@ -199,7 +199,41 @@
 							<div class="price__field">
 								Ціна: <span class="fst__price">50 грн</span> - <span class="scnd__price">1000 грн</span>
 							</div>
+						</div>    -->
+
+
+						<div class="filter__price">
+							<h4 class="filter__title">Вартість</h4>
+
+							<!--Slider-->
+							<div class="slider">
+								<div class="progress"></div>
+							</div>
+
+							<!--Range-input-->
+							<div class="range-input">
+								<input type="range" class="range-min" min="0" max="1300" value="50">
+								<input type="range" class="range-max" min="0" max="1300" value="1250">
+							</div>
+
+							<!--Price input-->
+							<div class="price-input">
+								<!--Field min-->
+								<div class="field">
+									<span>Min</span>
+									<input type="number" name="mn" class="input-min" value="50">
+								</div>
+								<div class="separator">-</div>
+								<!--Field Max-->
+								<div class="field">
+									<span>Max</span>
+									<input type="number" name="mx" class="input-max" value="1250">
+								</div>
+							</div>
+
 						</div>
+
+
 						<!--За квіткою-->
 						<div class="filter__flower">
 							<h4 class="filter__title">За квіткою</h4>
