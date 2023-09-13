@@ -85,6 +85,25 @@ for (let i = 0; i < boardLi.length; i++) {
 	});
 }
 
+//Нажатие на надпись Фильтр товаров
+
+const filterOpen = document.querySelector('.filter__open');
+const filterArea = document.querySelector('.filter__area');
+filterOpen.addEventListener('click', function (e) {
+	e.stopPropagation();
+	if (filterArea.style.display === 'none' || filterArea.style.display === '') {
+		filterArea.style.display = 'flex';
+
+	} else if (filterArea.style.display === 'flex') {
+		filterArea.style.display = 'none';
+
+	}
+});
+
+
+
+
+
 //Range slider
 
 const rangeInput = document.querySelectorAll(".range-input input");

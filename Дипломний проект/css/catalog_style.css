@@ -398,6 +398,7 @@ h6 {
     padding: 0 30px;
     background-size: cover;
     background-position: 50%;
+    min-height: 100vh;
   }
 }
 @media (max-width: 667px) {
@@ -406,7 +407,10 @@ h6 {
     width: 100%;
   }
   .content {
-    padding: 0 0px;
+    padding: 0 0;
+  }
+  .header__row {
+    padding: 0 15px;
   }
 }
 .menu {
@@ -532,6 +536,11 @@ h6 {
 .site__location a:hover {
   color: #43ffd2;
   transition: all 150ms;
+}
+@media (max-width: 710px) {
+  .site__location {
+    margin-top: 0;
+  }
 }
 
 .header__board {
@@ -955,6 +964,17 @@ h6 {
 
 .filter__goods {
   display: flex;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 710px) {
+  .filter__goods {
+    flex-direction: column;
+  }
+}
+
+.filter__area {
+  display: flex;
   flex-direction: column;
   align-self: start;
   width: 255px;
@@ -963,7 +983,7 @@ h6 {
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
 }
-.filter__goods label {
+.filter__area label {
   margin-top: 5px;
   color: #fff;
   font-family: Oswald;
@@ -974,16 +994,56 @@ h6 {
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
-.filter__goods label input {
+.filter__area label input {
   margin-right: 6px;
 }
-.filter__goods label input:checked {
+.filter__area label input:checked {
   background-color: #43ffd2;
+}
+@media (max-width: 710px) {
+  .filter__area {
+    display: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.filter__open {
+  display: none;
+  width: 100%;
+  justify-content: start;
+  margin-top: -40px;
+  color: #43ffd2;
+  font-family: Oswald;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  transition: all 150ms;
+}
+.filter__open :first-child {
+  text-decoration: underline;
+}
+.filter__open :last-child {
+  margin-left: 20px;
+  align-items: flex-end;
+}
+.filter__open:hover {
+  color: #d978ac;
+  transition: all 150ms;
+}
+@media (max-width: 710px) {
+  .filter__open {
+    display: flex;
+  }
 }
 
 .light__block {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .filter__title {
@@ -1108,47 +1168,6 @@ input[type=range]::-moz-range-thumb {
   pointer-events: auto;
 }
 
-/*
-//Линия цены
-.price__line {
-	width: 100%;
-	position: relative;
-	height: auto;
-	border: 0.2px solid #fff;
-	margin-top: 13px;
-}
-#dot1 {
-	position: absolute;
-	left: -2.5px;
-	top: -2.5px;
-	z-index: 1;
-	background-color: #43ffd2;
-	width: 5px;
-	height: 5px;
-	border-radius: 50%;
-}
-#dot2 {
-	position: absolute;
-	right: -2.5px;
-	top: -2.5px;
-	z-index: 1;
-	background-color: #43ffd2;
-	width: 5px;
-	height: 5px;
-	border-radius: 50%;
-}
-
-.price__field {
-	color: #fff;
-	font-family: Oswald;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 200;
-	line-height: normal;
-	letter-spacing: 0.6px;
-	text-transform: uppercase;
-	margin-top: 10px;
-} */
 .filter__flower {
   display: flex;
   flex-direction: column;
