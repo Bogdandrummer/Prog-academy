@@ -68,7 +68,7 @@
 							<h1 class="header__title big__title">
 								<span>Каталог</span>
 								<span>Букетів
-									<div class="header__subtitle">В нашому магазині найбільший вибір буветів для будь-яких подій:
+									<div class="header__subtitle">В нашому магазині найбільший вибір букетів для будь-яких подій:
 									</div>
 								</span>
 							</h1>
@@ -126,124 +126,122 @@
 				<!--Сортировка товаров-->
 				<div class="sort__list">
 					<!--Первая строка, кнопка сортировки-->
-					<div class="sort__row">
-						<div class="main__sort">
-							<span>Популярне</span>
-							<span>▾</span>
-							<ul class="sort">
-								<li class="sort__item">Популярне</li>
-								<li class="sort__item">Новинки</li>
-								<li class="sort__item">Від дешевшого до дорожчого</li>
-								<li class="sort__item">Від дорожчого до дешевшого</li>
-							</ul>
+					<div class="main__sort">
+						<span>Популярне</span>
+						<span>▾</span>
+					</div>
+					<ul class="sort">
+						<li class="sort__item">Популярне</li>
+						<li class="sort__item">Новинки</li>
+						<li class="sort__item">Від дешевшого до дорожчого</li>
+						<li class="sort__item">Від дорожчого до дешевшого</li>
+					</ul>
+				</div>
+
+				<!--Панель Фильтр товаров-->
+				<section class="filter__goods">
+					<div class="filter__open">
+						<span>Фільтр товарів</span>
+						<span>▾</span>
+					</div>
+					<div class="filter__area">
+						<!--За світлом-->
+						<div class="light__block">
+							<h4 class="filter__title">За світлом</h4>
+							<!--Пункти-->
+							<label for="ch1">
+								<input type="checkbox" id="ch1" />Ніжні
+							</label>
+							<label for="ch2">
+								<input type="checkbox" id="ch2" />
+								Яскраві</label>
+						</div>
+						<!--За кольором-->
+						<div class="color__block">
+							<h4 class="filter__title">За кольором</h4>
+							<!--Пункти-->
+
+							<label for="ch3"><input type="checkbox" id="ch3" />
+								Білий</label>
+							<label for="ch4"><input type="checkbox" id="ch4" />
+								Жовтий</label>
+							<label for="ch5"><input type="checkbox" id="ch5" />
+								Червоний</label>
+							<label for="ch6"><input type="checkbox" id="ch6" />
+								Зелений</label>
+							<label for="ch7"><input type="checkbox" id="ch7" />
+								Помаранчовий</label>
+							<label for="ch8"><input type="checkbox" id="ch8" />
+								Рожевий</label>
+							<label for="ch9"><input type="checkbox" id="ch9" />
+								Синій</label>
+						</div>
+						<!--За форматом-->
+						<div class="format__block">
+							<h4 class="filter__title">За форматом</h4>
+							<label for="ch10"><input type="checkbox" id="ch10" />
+								Букет</label>
+							<label for="ch11"><input type="checkbox" id="ch11" />
+								У вазі</label>
+							<label for="ch12"><input type="checkbox" id="ch12" />
+								У конверті</label>
+							<label for="ch13"><input type="checkbox" id="ch13" />
+								У корзині</label>
+							<label for="ch14"><input type="checkbox" id="ch14" />
+								У капелюшній коробці</label>
+							<label for="ch15"><input type="checkbox" id="ch15" />
+								У ящику</label>
+						</div>
+
+						<!--Вартість-->
+						<div class="filter__price">
+							<h4 class="filter__title">Вартість</h4>
+
+							<!--Slider-->
+							<div class="slider">
+								<div class="progress"></div>
+							</div>
+
+							<!--Range-input-->
+							<div class="range-input">
+								<input type="range" class="range-min" min="0" max="1300" value="50">
+								<input type="range" class="range-max" min="0" max="1300" value="1250">
+							</div>
+
+							<!--Price input-->
+							<div class="price-input">
+								<!--Field min-->
+								<div class="field">
+									<input type="number" name="mn" class="input-min" value="50">
+								</div>
+								<div class="separator">-</div>
+								<!--Field Max-->
+								<div class="field">
+									<input type="number" name="mx" class="input-max" value="1250">
+								</div>
+							</div>
+
+						</div>
+
+
+						<!--За квіткою-->
+						<div class="filter__flower">
+							<h4 class="filter__title">За квіткою</h4>
+							<label for="ch16"><input type="checkbox" id="ch16" />
+								Альстремерія</label>
+							<label for="ch17"><input type="checkbox" id="ch17" />
+								Антуріум</label>
+							<label for="ch18"><input type="checkbox" id="ch18" />
+								Холодок лікарський</label>
+							<label for="ch19"><input type="checkbox" id="ch19" />
+								Астильба</label>
+							<label for="ch20"><input type="checkbox" id="ch20" />
+								Астранція</label>
 						</div>
 					</div>
+				</section>
 
 
-					<!--Панель Фильтр товаров-->
-					<section class="filter__goods">
-						<div class="filter__open">
-							<span>Фільтр товарів</span>
-							<span>▾</span>
-						</div>
-						<div class="filter__area">
-							<!--За світлом-->
-							<div class="light__block">
-								<h4 class="filter__title">За світлом</h4>
-								<!--Пункти-->
-								<label for="ch1">
-									<input type="checkbox" id="ch1" />Ніжні
-								</label>
-								<label for="ch2">
-									<input type="checkbox" id="ch2" />
-									Яскраві</label>
-							</div>
-							<!--За кольором-->
-							<div class="color__block">
-								<h4 class="filter__title">За кольором</h4>
-								<!--Пункти-->
-
-								<label for="ch3"><input type="checkbox" id="ch3" />
-									Білий</label>
-								<label for="ch4"><input type="checkbox" id="ch4" />
-									Жовтий</label>
-								<label for="ch5"><input type="checkbox" id="ch5" />
-									Червоний</label>
-								<label for="ch6"><input type="checkbox" id="ch6" />
-									Зелений</label>
-								<label for="ch7"><input type="checkbox" id="ch7" />
-									Помаранчовий</label>
-								<label for="ch8"><input type="checkbox" id="ch8" />
-									Рожевий</label>
-								<label for="ch9"><input type="checkbox" id="ch9" />
-									Синій</label>
-							</div>
-							<!--За форматом-->
-							<div class="format__block">
-								<h4 class="filter__title">За форматом</h4>
-								<label for="ch10"><input type="checkbox" id="ch10" />
-									Букет</label>
-								<label for="ch11"><input type="checkbox" id="ch11" />
-									У вазі</label>
-								<label for="ch12"><input type="checkbox" id="ch12" />
-									У конверті</label>
-								<label for="ch13"><input type="checkbox" id="ch13" />
-									У корзині</label>
-								<label for="ch14"><input type="checkbox" id="ch14" />
-									У капелюшній коробці</label>
-								<label for="ch15"><input type="checkbox" id="ch15" />
-									У ящику</label>
-							</div>
-
-							<!--Вартість-->
-							<div class="filter__price">
-								<h4 class="filter__title">Вартість</h4>
-
-								<!--Slider-->
-								<div class="slider">
-									<div class="progress"></div>
-								</div>
-
-								<!--Range-input-->
-								<div class="range-input">
-									<input type="range" class="range-min" min="0" max="1300" value="50">
-									<input type="range" class="range-max" min="0" max="1300" value="1250">
-								</div>
-
-								<!--Price input-->
-								<div class="price-input">
-									<!--Field min-->
-									<div class="field">
-										<input type="number" name="mn" class="input-min" value="50">
-									</div>
-									<div class="separator">-</div>
-									<!--Field Max-->
-									<div class="field">
-										<input type="number" name="mx" class="input-max" value="1250">
-									</div>
-								</div>
-
-							</div>
-
-
-							<!--За квіткою-->
-							<div class="filter__flower">
-								<h4 class="filter__title">За квіткою</h4>
-								<label for="ch16"><input type="checkbox" id="ch16" />
-									Альстремерія</label>
-								<label for="ch17"><input type="checkbox" id="ch17" />
-									Антуріум</label>
-								<label for="ch18"><input type="checkbox" id="ch18" />
-									Холодок лікарський</label>
-								<label for="ch19"><input type="checkbox" id="ch19" />
-									Астильба</label>
-								<label for="ch20"><input type="checkbox" id="ch20" />
-									Астранція</label>
-							</div>
-						</div>
-					</section>
-
-				</div>
 
 			</div>
 		</header>

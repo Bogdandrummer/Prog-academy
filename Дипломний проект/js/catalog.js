@@ -56,10 +56,10 @@ mainSort.addEventListener('click', function (e) {
 	e.stopPropagation();
 	if (sort.style.display === 'none' || sort.style.display === '') {
 		sort.style.display = 'flex';
-		e.stopPropagation();
+
 	} else if (sort.style.display === 'flex') {
 		sort.style.display = 'none';
-		e.stopPropagation();
+
 	}
 });
 // Событие клик на пункте списка
@@ -71,8 +71,9 @@ for (let i = 0; i < sortElem.length; i++) {
 		mainSort.firstElementChild.innerText = sortText;
 	});
 }
+
 //Событие, когда курсор покидает пределы меню сортировки
-mainSort.addEventListener('mouseleave', function () {
+sort.addEventListener('mouseleave', function () {
 	sort.style.display = 'none';
 });
 
